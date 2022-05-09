@@ -1,10 +1,12 @@
-﻿<Window x:Class="CrazyCarKonfigurator.MainWindow"
+﻿<Window x:Class="CrazyCarKonfigurator.Controller"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CrazyCarKonfigurator"
         mc:Ignorable="d"
-        Title="CrazyCar Konfigurator" Height="420" Width="776">
-    <Grid HorizontalAlignment="Center" Height="399" VerticalAlignment="Top" Width="776"/>
+        Title="Controller" Height="450" Width="800">
+    <Grid>
+        
+    </Grid>
 </Window>

@@ -1,0 +1,6 @@
+﻿Bezeichnung;Preis;Gewicht;Reichweite;Sensorart;Schnittstelle;
+STM VL53L1X;9,99;3;400;TOF;I2C;
+Sharp GP2Y0A02YK;12,1;6;150;Reflektion;Analogspannung;https://www.reichelt.de/distanzsensor-20-150-cm-analog-gp2-0215k-p193038.html?PROVID=2788&gclid=CjwKCAjw9-KTBhBcEiwAr19ig6QxgCQrTn7YNX90qI1GEYnY2UIVuD2eQua5WH3WJZHKNupw1D8qxRoC4YgQAvD_BwE
+Sharp GP2-1055K;21,3;10;550;Reflektion;Analogspannung;https://www.reichelt.de/distanzsensor-100-550-cm-analog-gp2-1055k-p114321.html?PROVID=2788&gclid=CjwKCAjw9-KTBhBcEiwAr19ig57AXM2iuBYhB1ibMh3JXjgHbxVCZzNXFQEgGLraJo4lPYBA8YQYsBoCjZoQAvD_BwE
+RPLIDAR A1M8;129,95;251;1200;Triangulation;UART;https://www.reichelt.de/rplidar-a1m8-360-laser-scanner-12m-rplidar-a1m8-p314357.html?PROVID=2788&gclid=CjwKCAjw9-KTBhBcEiwAr19ig3_0Hieiaan2E1aa2dxt4HCqmEpJnY-BG41MpR3JqoxdrZhEoxYmghoCIksQAvD_BwE
+DEBO HC-SR04;3,8;9;400;Ultraschall;Pulse-Echo;https://www.reichelt.de/entwicklerboards-ultraschall-abstandssensor-hc-sr04-debo-sen-ultra-p161487.html?PROVID=2788&gclid=CjwKCAjw9-KTBhBcEiwAr19ig0eFab9sz2ZccGO48S9i_c-u2xhxhO3VihHUjAGSVdhFQbqZlW2T8BoCPUkQAvD_BwE

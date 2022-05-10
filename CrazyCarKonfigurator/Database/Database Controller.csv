@@ -1,0 +1,6 @@
+﻿Bezeichnung;Preis;Gewicht;Taktrate;PinAnzahl;UART;I2C
+ATMEGA32;5,7;6;16.000.000,00;40;true;false
+STM32;2,6;2;120.000.000,00;44;true;true
+ESP32;11,99;23;240.000.000,00;30;true;false
+Arduino Uno;23,49;31;16.000.000,00;16;true;false
+Rpi Zero 2W;15,9;12;1.000.000.000,00;40;true;true

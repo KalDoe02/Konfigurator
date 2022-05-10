@@ -16,15 +16,13 @@ using System.Windows.Shapes;
 namespace CrazyCarKonfigurator
 {
     /// <summary>
-    /// Interaktionslogik für controller.xaml
+    /// Interaktionslogik für zusammenfassung.xaml
     /// </summary>
-    public partial class controller : Page
+    public partial class zusammenfassung : Page
     {
-        public controller()
+        public zusammenfassung()
         {
             InitializeComponent();
         }
-
-        
     }
 }

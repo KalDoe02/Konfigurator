@@ -6,5 +6,20 @@
         xmlns:local="clr-namespace:CrazyCarKonfigurator"
         mc:Ignorable="d"
         Title="CrazyCar Konfigurator" Height="420" Width="776">
-    <Grid HorizontalAlignment="Center" Height="399" VerticalAlignment="Top" Width="776"/>
+
+    <Grid>
+        <Frame Name="FrameWithinGrid" >
+        </Frame>
+        <Button Content="Controller" HorizontalAlignment="Left" Height="20" Margin="7,23,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click"/>
+        <Button Content="Sensoren" HorizontalAlignment="Left" Height="20" Margin="97,23,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_1"/>
+        <Button Content="Motor" HorizontalAlignment="Left" Height="20" Margin="187,23,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_2"/>
+        <Button Content="Akku" HorizontalAlignment="Left" Height="20" Margin="277,23,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_3"/>
+        <Button Content="Servo" HorizontalAlignment="Left" Height="20" Margin="367,23,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_4"/>
+        <Button Content="Karosserie" HorizontalAlignment="Left" Height="20" Margin="457,23,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_5"/>
+        <Button Content="Reifen" HorizontalAlignment="Left" Height="20" Margin="547,23,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_6"/>
+        <Button Content="Zusammenfassung" HorizontalAlignment="Left" Height="20" Margin="637,23,0,0" VerticalAlignment="Top" Width="136" Click="Button_Click_7"/>
+
+    </Grid>
+
 </Window>
+

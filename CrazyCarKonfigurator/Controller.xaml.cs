@@ -18,13 +18,25 @@ namespace CrazyCarKonfigurator
     /// <summary>
     /// Interaktionslogik für controller.xaml
     /// </summary>
+    ///
+
+
     public partial class controller : Page
     {
+
         public controller()
         {
             InitializeComponent();
+            //Controller1_Name_Textbox.Text = Controller[2];
         }
 
-        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //Testname = Controller1_Textbox.Text;
+
+            //Controller1_Name_Textbox.Text = Testname;
+
+
+        }
     }
 }

@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrazyCarKonfigurator", "CrazyCarKonfigurator\CrazyCarKonfigurator.csproj", "{5D4EC667-96CC-46CD-8207-D0BF033891A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrazyCarKonfigurator", "CrazyCarKonfigurator\CrazyCarKonfigurator.csproj", "{5D4EC667-96CC-46CD-8207-D0BF033891A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Dateninput", "Test_Dateninput\Test_Dateninput.csproj", "{89135C3B-2B0F-4EA9-A6A0-A3858D7183B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Klassenbibliothek", "Klassenbibliothek\Klassenbibliothek.csproj", "{9391FBA5-7EAF-423D-BDA3-CBE4C7BF29EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{5D4EC667-96CC-46CD-8207-D0BF033891A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D4EC667-96CC-46CD-8207-D0BF033891A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D4EC667-96CC-46CD-8207-D0BF033891A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89135C3B-2B0F-4EA9-A6A0-A3858D7183B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89135C3B-2B0F-4EA9-A6A0-A3858D7183B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89135C3B-2B0F-4EA9-A6A0-A3858D7183B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89135C3B-2B0F-4EA9-A6A0-A3858D7183B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9391FBA5-7EAF-423D-BDA3-CBE4C7BF29EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9391FBA5-7EAF-423D-BDA3-CBE4C7BF29EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9391FBA5-7EAF-423D-BDA3-CBE4C7BF29EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9391FBA5-7EAF-423D-BDA3-CBE4C7BF29EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

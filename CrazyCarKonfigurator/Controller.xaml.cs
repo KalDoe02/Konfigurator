@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Klassenbibliothek;
+
 
 namespace CrazyCarKonfigurator
 {
@@ -23,18 +25,26 @@ namespace CrazyCarKonfigurator
 
     public partial class controller : Page
     {
+        private string Testname = "STM 32";
 
         public controller()
         {
             InitializeComponent();
             //Controller1_Name_Textbox.Text = Controller[2];
+
+
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             //Testname = Controller1_Textbox.Text;
-
-            //Controller1_Name_Textbox.Text = Testname;
+            CSV_Input i=new CSV_Input();
+            List<Controller> l=i.getAll();
+            //Controller1_Name_Textbox.Text =  ;
+            
+                //Testname;
+    
 
 
         }

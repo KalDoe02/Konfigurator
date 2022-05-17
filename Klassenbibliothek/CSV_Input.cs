@@ -4,14 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+//using CrazyCarKonfigurator;
 
-namespace CrazyCarKonfigurator
+
+namespace Klassenbibliothek
 {
-    internal class Controller_Selector_CSV
+    public class CSV_Input
     {
         private List<Controller> controllers;
 
-        public Controller_Selector_CSV()
+        public CSV_Input()
         {
             controllers = new List<Controller>();
 
@@ -31,11 +33,12 @@ namespace CrazyCarKonfigurator
             }
         }
 
-        public Controller[] getAll()
+        public List<Controller> getAll()
         {
-            return controllers.ToArray();
+            return controllers;//.ToArray();
         }
 
 
     }
+
 }

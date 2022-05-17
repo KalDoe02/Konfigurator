@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CrazyCarKonfigurator
+namespace Klassenbibliothek
 {
-    internal class Controller
+    public class Controller
     {
-        public string Bezeichnung { get; set; }
+        public string? Bezeichnung { get; set; }
         public float Preis { get; set; }
         public int Gewicht { get; set; }
         public int Taktrate { get; set; }

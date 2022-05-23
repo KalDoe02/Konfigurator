@@ -9,36 +9,50 @@ using System.IO;
 
 namespace Klassenbibliothek
 {
+
     public class CSV_Input
     {
-        private List<Controller> controllers;
+        public List<Controller> controllerListe;
 
-        public CSV_Input()
+        public List<Controller> CSV_Input()
         {
-            controllers = new List<Controller>();
 
-            string[] zeilen = File.ReadAllLines(@"\Database\Database Controller.csv");
-            foreach (string zeile in zeilen )
+            // CSV Daten ín einzelne Zeilen einlesen
+            //string[] csvLines = File.ReadAllLines(@"\Database\Database Controller.csv");
+            string[] csvLines = File.ReadAllLines(@"C:\Users\Felix\Source\Repos\KalDoe02\Konfigurator\Klassenbibliothek\Database\Database Controller.csv");
+
+            // Teile jede Reihe in Spalten
+            for (int i = 1; i < csvLines.Length; i++)       // i mit 1 initialisieren, damit erste Zeile übersprungen wird Headerzeile
             {
-                string[] daten = zeile.Split(';');
-                string Bezeichnung = daten[1];
-                float Preis = float.Parse(daten[2]);
-                int Gewicht = int.Parse(daten[3]);
-                int Taktrate = int.Parse(daten[4]);
-                int PinAnzahl = int.Parse(daten[5]);
-                bool UART = bool.Parse(daten[6]);
-                bool I2C = bool.Parse(daten[7]);
+                // Bezeichnung;Preis;Gewicht;Taktrate;PinAnzahl;UART;I2C
+                // ATMEGA32;5,7;6;16.000.000,00;40;true;false
 
-                controllers.Add(new Controller { Bezeichnung = Bezeichnung, Preis = Preis, Gewicht = Gewicht, Taktrate = Taktrate, PinAnzahl = PinAnzahl, UART = UART, I2C = I2C });
+                string[] lineData = csvLines[i].Split(';');
+
+                string Bezeichnung = lineData[0];
+                float Preis = float.Parse(lineData[1]);
+                int Gewicht = int.Parse(lineData[2]);
+                double Taktrate = double.Parse(lineData[3]);
+                int PinAnzahl = int.Parse(lineData[4]);
+                bool UART = bool.Parse(lineData[5]);
+                bool I2C = bool.Parse(lineData[6]);
+                controllerListe.Add(new Controller
+                {
+                    Bezeichnung = Bezeichnung,
+                    Preis = Preis,
+                    Gewicht = Gewicht,
+                    Taktrate = Taktrate,
+                    PinAnzahl = PinAnzahl,
+                    UART = UART,
+                    I2C = I2C
+                });
             }
+            return controllerListe.ToArray();
         }
-
-        public List<Controller> getAll()
+        public Controller[] getAll()
         {
-            return controllers;//.ToArray();
+            return controllerListe.ToArray();
         }
-
 
     }
-
 }

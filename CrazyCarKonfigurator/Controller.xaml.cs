@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Klassenbibliothek;
-
 
 namespace CrazyCarKonfigurator
 {
@@ -40,13 +40,22 @@ namespace CrazyCarKonfigurator
         {
             //Testname = Controller1_Textbox.Text;
             CSV_Input i=new CSV_Input();
-            List<Controller> l=i.getAll();
-            //Controller1_Name_Textbox.Text =  ;
+
+            //Klassenbibliothek.Controller
+            List<Controller> cL = i.getAll();
+
+            
+            //Controller1_Name_Textbox.Text = 
             
                 //Testname;
     
 
 
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+     
         }
     }
 }

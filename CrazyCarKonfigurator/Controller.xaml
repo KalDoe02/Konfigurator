@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:CrazyCarKonfigurator"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="controller">
+      Title="controller" Loaded="Page_Loaded">
 
     <Grid Background="White" >
         <Grid.RowDefinitions>

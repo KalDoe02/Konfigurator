@@ -25,8 +25,6 @@ namespace CrazyCarKonfigurator
 
     public partial class controller : Page
     {
-        private string Testname = "STM 32";
-
         public controller()
         {
             InitializeComponent();
@@ -38,24 +36,32 @@ namespace CrazyCarKonfigurator
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //Testname = Controller1_Textbox.Text;
-            CSV_Input i=new CSV_Input();
-
-            //Klassenbibliothek.Controller
-            List<Controller> cL = i.getAll();
-
-            
-            //Controller1_Name_Textbox.Text = 
-            
-                //Testname;
-    
 
 
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-     
+            //Testname = Controller1_Textbox.Text;
+            CSV_Input i = new CSV_Input();
+
+            string name1 = i.controllerListe[0].Bezeichnung;
+            float daten1 = i.controllerListe[1].Preis;
+
+            Controller1_Daten_Textbox.Text = "Preis: " + daten1.ToString() + " €";
+            Controller1_Name_Textbox.Text = name1;
+
+            string name2 = i.controllerListe[1].Bezeichnung;
+            Controller2_Name_Textbox.Text = name2;
+
+            string name3 = i.controllerListe[2].Bezeichnung;
+            Controller3_Name_Textbox.Text = name3;
+
+            string name4 = i.controllerListe[3].Bezeichnung;
+            Controller4_Name_Textbox.Text = name4;
+
+            
+
         }
     }
 }

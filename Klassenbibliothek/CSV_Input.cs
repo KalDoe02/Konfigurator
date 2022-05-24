@@ -12,10 +12,11 @@ namespace Klassenbibliothek
 
     public class CSV_Input
     {
-        public List<Controller> controllerListe;
+        public List<Controller> controllerListe { get; set; } = GetControllers();
 
-        public List<Controller> CSV_Input()
+        public static List<Controller> GetControllers()
         {
+            var list = new List<Controller>();
 
             // CSV Daten ín einzelne Zeilen einlesen
             //string[] csvLines = File.ReadAllLines(@"\Database\Database Controller.csv");
@@ -28,6 +29,7 @@ namespace Klassenbibliothek
                 // ATMEGA32;5,7;6;16.000.000,00;40;true;false
 
                 string[] lineData = csvLines[i].Split(';');
+                
 
                 string Bezeichnung = lineData[0];
                 float Preis = float.Parse(lineData[1]);
@@ -36,7 +38,7 @@ namespace Klassenbibliothek
                 int PinAnzahl = int.Parse(lineData[4]);
                 bool UART = bool.Parse(lineData[5]);
                 bool I2C = bool.Parse(lineData[6]);
-                controllerListe.Add(new Controller
+                list.Add(new Controller
                 {
                     Bezeichnung = Bezeichnung,
                     Preis = Preis,
@@ -47,12 +49,7 @@ namespace Klassenbibliothek
                     I2C = I2C
                 });
             }
-            return controllerListe.ToArray();
+            return list;
         }
-        public Controller[] getAll()
-        {
-            return controllerListe.ToArray();
-        }
-
     }
 }

@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Klassenbibliothek;
+using CrazyCarKonfigurator;
 
 namespace CrazyCarKonfigurator
 {
@@ -34,34 +35,49 @@ namespace CrazyCarKonfigurator
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-
-        }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             //Testname = Controller1_Textbox.Text;
             CSV_Input i = new CSV_Input();
 
-            string name1 = i.controllerListe[0].Bezeichnung;
-            float daten1 = i.controllerListe[1].Preis;
+            Controller1_Name_Textbox.Text = i.controllerListe[0].Bezeichnung;
+            Controller1_Daten_Textbox.Text = "Preis: " + i.controllerListe[0].Preis.ToString() + " €" + "\t" + "\t" + "Gewicht: " +
+                                             i.controllerListe[0].Gewicht.ToString() + " g" + "\n" +
+                                             "Taktrate: " + i.controllerListe[0].Taktrate.ToString() + " Hz" + "\t" + "Pin Anzahl: " +
+                                             i.controllerListe[0].PinAnzahl.ToString();
+                                             //if (i.controllerListe[0].UART) { "UART"}
 
-            Controller1_Daten_Textbox.Text = "Preis: " + daten1.ToString() + " €";
-            Controller1_Name_Textbox.Text = name1;
 
-            string name2 = i.controllerListe[1].Bezeichnung;
-            Controller2_Name_Textbox.Text = name2;
 
-            string name3 = i.controllerListe[2].Bezeichnung;
-            Controller3_Name_Textbox.Text = name3;
+            Controller2_Name_Textbox.Text = i.controllerListe[1].Bezeichnung;
+            Controller2_Daten_Textbox.Text = "Preis: " + i.controllerListe[1].Preis.ToString() + " €" + "\t" + "\t" + "Gewicht: " +
+                                             i.controllerListe[1].Gewicht.ToString() + " g" + "\n" +
+                                             "Taktrate: " + i.controllerListe[1].Taktrate.ToString() + " Hz" + "\t" + "Pin Anzahl: " +
+                                             i.controllerListe[1].PinAnzahl.ToString();
 
-            string name4 = i.controllerListe[3].Bezeichnung;
-            Controller4_Name_Textbox.Text = name4;
+            Controller3_Name_Textbox.Text = i.controllerListe[2].Bezeichnung;
+            Controller3_Daten_Textbox.Text = "Preis: " + i.controllerListe[2].Preis.ToString() + " €" + "\t" + "\t" + "Gewicht: " +
+                                             i.controllerListe[2].Gewicht.ToString() + " g" + "\n" +
+                                             "Taktrate: " + i.controllerListe[2].Taktrate.ToString() + " Hz" + "\t" + "Pin Anzahl: " +
+                                             i.controllerListe[2].PinAnzahl.ToString();
 
-            
+            Controller4_Name_Textbox.Text = i.controllerListe[3].Bezeichnung;
+            Controller4_Daten_Textbox.Text = "Preis: " + i.controllerListe[3].Preis.ToString() + " €" + "\t" + "\t" + "Gewicht: " +
+                                             i.controllerListe[3].Gewicht.ToString() + " g" + "\n" +
+                                             "Taktrate: " + i.controllerListe[3].Taktrate.ToString() + " Hz" + "\t" + "Pin Anzahl: " +
+                                             i.controllerListe[3].PinAnzahl.ToString();
 
+        }
+
+        private void Controller1_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Weiter_Button_Click(object sender, RoutedEventArgs e)
+        {
+           // FrameWithinGrid.Navigate(new System.Uri("sensor.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 }

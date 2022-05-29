@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CrazyCarKonfigurator"
         mc:Ignorable="d"
-        Title="CrazyCar Konfigurator" Height="420" Width="776">
+        Title="CrazyCar Konfigurator" Height="480" Width="800">
 
     <Grid>
-        <Frame Name="FrameWithinGrid" >
+        <Frame Name="FrameWithinGrid" NavigationUIVisibility="Hidden" >
         </Frame>
         <Button Content="Controller" HorizontalAlignment="Left" Height="20" Margin="7,23,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click"/>
         <Button Content="Sensoren" HorizontalAlignment="Left" Height="20" Margin="97,23,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_1"/>

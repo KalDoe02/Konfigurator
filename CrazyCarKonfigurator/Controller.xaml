@@ -13,7 +13,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="449*"/>
         </Grid.RowDefinitions>
-        <Button Content="Weiter" HorizontalAlignment="Left" Height="21" Margin="686,370,0,0" VerticalAlignment="Top" Width="80" Grid.Row="1"/>
+        <Button x:Name="Weiter_Button" Content="Weiter" HorizontalAlignment="Left" Height="21" Margin="686,370,0,0" VerticalAlignment="Top" Width="80" Grid.Row="1" Click="Weiter_Button_Click"/>
         
         <TextBlock 
             x:Name="Controller1_Name_Textbox" 
@@ -45,7 +45,7 @@
             FontSize="8" 
             FontWeight="Bold" 
             Grid.Row="1"
-            Click="Button_Click"/>
+            Click="Controller1_Button_Click"/>
         <Button Content="Hinzufügen" HorizontalAlignment="Left" Height="16" Margin="400,201,0,0" VerticalAlignment="Top" Width="80"  FontSize="8" FontWeight="Bold" Grid.Row="1"/>
         <Button Content="Hinzufügen" HorizontalAlignment="Left" Height="16" Margin="400,281,0,0" VerticalAlignment="Top" Width="80"  FontSize="8" FontWeight="Bold" Grid.Row="1"/>
         <Button Content="Hinzufügen" HorizontalAlignment="Left" Height="16" Margin="400,366,0,0" VerticalAlignment="Top" Width="80"  FontSize="8" FontWeight="Bold" Grid.Row="1"/>

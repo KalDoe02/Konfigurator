@@ -12,6 +12,7 @@ namespace CrazyCarKonfigurator
         public MainWindow()
         {
             InitializeComponent();
+            AddtoAuswahl();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -53,5 +54,12 @@ namespace CrazyCarKonfigurator
         {
             FrameWithinGrid.Navigate(new System.Uri("zusammenfassung.xaml", UriKind.RelativeOrAbsolute));
         }
+
+        private void AddtoAuswahl()
+        {
+            string[] test = { "Test1", "Test2" };
+            Aktuelle_Auswahl_Liste.ItemsSource = test;
+        }
+
     }
 }

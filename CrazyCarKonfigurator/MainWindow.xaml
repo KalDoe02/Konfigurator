@@ -18,7 +18,16 @@
         <Button Content="Karosserie" HorizontalAlignment="Left" Height="20" Margin="457,23,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_5"/>
         <Button Content="Reifen" HorizontalAlignment="Left" Height="20" Margin="547,23,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_6"/>
         <Button Content="Zusammenfassung" HorizontalAlignment="Left" Height="20" Margin="637,23,0,0" VerticalAlignment="Top" Width="136" Click="Button_Click_7"/>
-
+        <ListBox
+            x:Name="Aktuelle_Auswahl_Liste"
+            Grid.Row="1"
+            d:ItemsSource="{d:SampleData ItemCount=5}" 
+            Margin="565,62,0,0" 
+            HorizontalAlignment="Left" 
+            Width="200" 
+            Height="250" 
+            VerticalAlignment="Top"/>
+        
     </Grid>
 
 </Window>

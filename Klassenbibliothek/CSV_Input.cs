@@ -16,6 +16,8 @@ namespace Klassenbibliothek
         public List<Sensor> sensorListe { get; set; } = getSensors();
         public List<Motor> motorListe { get; set; } = GetMotors();
         public List<Servo> servoListe { get; set; } = GetServos();
+        public List<Akku> akkuListe { get; set; } = GetAkkus();
+
 
         public static List<Controller> GetControllers()
         {
@@ -154,6 +156,43 @@ namespace Klassenbibliothek
                     Gewicht = Gewicht,
                     Stellzeit = Stellzeit,
                     Drehmoment = Drehmoment
+                });
+            }
+            return list;
+        }
+        public static List<Akku> GetAkkus()
+        {
+            var list = new List<Akku>();
+
+            // CSV Daten ín einzelne Zeilen einlesen
+            string[] csvLines = File.ReadAllLines(@"..\..\..\..\Klassenbibliothek\Database\Database Akku.csv");
+
+
+            // Teile jede Reihe in Spalten
+            for (int i = 1; i < csvLines.Length; i++)  // i mit 1 initialisieren, damit erste Zeile übersprungen wird Headerzeile
+            {
+                // Bezeichnung;Preis;Gewicht;Taktrate;PinAnzahl;UART;I2C
+                // ATMEGA32;5,7;6;16.000.000,00;40;true;false
+
+                string[] lineData = csvLines[i].Split(',');
+
+
+                string Bezeichnung = lineData[0];
+                float Preis = float.Parse(lineData[1]);
+                int Gewicht = int.Parse(lineData[2]);
+                float Spannung = float.Parse(lineData[3]);
+                int capacity = int.Parse(lineData[4]);
+                string art = lineData[5];
+                int anzahlzellen = int.Parse(lineData[6]);
+                list.Add(new Akku
+                {
+                    Bezeichnung = Bezeichnung,
+                    Preis = Preis,
+                    Gewicht = Gewicht,
+                    Spannung = Spannung,
+                    capacity = capacity,
+                    art = art,
+                    anzahlzellen = anzahlzellen
                 });
             }
             return list;

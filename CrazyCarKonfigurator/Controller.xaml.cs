@@ -29,7 +29,6 @@ namespace CrazyCarKonfigurator
         public controller()
         {
             InitializeComponent();
-            //Controller1_Name_Textbox.Text = Controller[2];
 
 
 

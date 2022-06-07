@@ -144,7 +144,7 @@ namespace Klassenbibliothek
 
                 string Bezeichnung = lineData[0];
                 float Preis = float.Parse(lineData[1]);
-                int Gewicht = int.Parse(lineData[2]);
+                float Gewicht = float.Parse(lineData[2]);
                 float Stellzeit = float.Parse(lineData[3]);
                 float Drehmoment = float.Parse(lineData[4]);
                 list.Add(new Servo

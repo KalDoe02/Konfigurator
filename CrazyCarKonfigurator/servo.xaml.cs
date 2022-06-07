@@ -40,6 +40,30 @@ namespace CrazyCarKonfigurator
             Servo1_Daten_Textbox.Text += "\n";
             Servo1_Daten_Textbox.Text += "Drehmoment: " + i.servoListe[0].Drehmoment + " kg/cm";
 
+
+            Servo2_Name_Textbox.Text = i.servoListe[1].Bezeichnung;
+            Servo2_Daten_Textbox.Text = "Preis: " + i.servoListe[1].Preis.ToString() + " €" + "\t" + "Gewicht: " +
+                                                        i.servoListe[1].Gewicht.ToString() + " g";
+            Servo2_Daten_Textbox.Text += "\t" + "Stellzeit: " + i.servoListe[1].Stellzeit + " s";
+            Servo2_Daten_Textbox.Text += "\n";
+            Servo2_Daten_Textbox.Text += "Drehmoment: " + i.servoListe[1].Drehmoment + " kg/cm";
+
+
+            Servo3_Name_Textbox.Text = i.servoListe[2].Bezeichnung;
+            Servo3_Daten_Textbox.Text = "Preis: " + i.servoListe[2].Preis.ToString() + " €" + "\t" + "Gewicht: " +
+                                                        i.servoListe[2].Gewicht.ToString() + " g";
+            Servo3_Daten_Textbox.Text += "\t" + "Stellzeit: " + i.servoListe[2].Stellzeit + " s";
+            Servo3_Daten_Textbox.Text += "\n";
+            Servo3_Daten_Textbox.Text += "Drehmoment: " + i.servoListe[2].Drehmoment + " kg/cm";
+
+
+            Servo4_Name_Textbox.Text = i.servoListe[3].Bezeichnung;
+            Servo4_Daten_Textbox.Text = "Preis: " + i.servoListe[3].Preis.ToString() + " €" + "\t" + "Gewicht: " +
+                                                       i.servoListe[3].Gewicht.ToString() + " g";
+            Servo4_Daten_Textbox.Text += "\t" + "Stellzeit: " + i.servoListe[3].Stellzeit + " s";
+            Servo4_Daten_Textbox.Text += "\n";
+            Servo4_Daten_Textbox.Text += "Drehmoment: " + i.servoListe[3].Drehmoment + " kg/cm";
+
         }
 
 

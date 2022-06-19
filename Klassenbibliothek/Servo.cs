@@ -10,9 +10,10 @@ namespace Klassenbibliothek
     {
         public string Bezeichnung { get; set; }
         public float Preis { get; set; }
-        public float Gewicht { get; set; }
+        public int Gewicht { get; set; }
         public float Stellzeit { get; set; }
         public float Drehmoment { get; set; }
+
 
 
 

@@ -6,21 +6,35 @@
       xmlns:local="clr-namespace:CrazyCarKonfigurator"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="karosserie">
+      Title="karosserie" Loaded="Page_Loaded">
 
-    <Grid>
-        <Button Content="Weiter" HorizontalAlignment="Left" Height="21" Margin="686,371,0,0" VerticalAlignment="Top" Width="80"/>
-        <TextBlock HorizontalAlignment="Left" Height="19" Margin="20,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"><Run Language="de-de" Text="Karosserie 1"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Height="19" Margin="20,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"><Run Text="Karosserie "/><Run Language="de-de" Text="2"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Height="19" Margin="20,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"><Run Text="Karosserie "/><Run Language="de-de" Text="3"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Height="19" Margin="20,303,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"><Run Text="Karosserie "/><Run Language="de-de" Text="4"/><LineBreak/><Run Language="de-de"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="20,82,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="56" Width="375"/>
-        <TextBlock HorizontalAlignment="Left" Margin="20,242,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="56" Width="375"/>
-        <TextBlock HorizontalAlignment="Left" Margin="20,162,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="56" Width="375"/>
-        <TextBlock HorizontalAlignment="Left" Margin="20,327,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="56" Width="375"/>
-        <Button Content="Hinzufügen" HorizontalAlignment="Left" Height="16" Margin="400,122,0,0" VerticalAlignment="Top" Width="80"  FontSize="8" FontWeight="Bold"/>
-        <Button Content="Hinzufügen" HorizontalAlignment="Left" Height="16" Margin="400,202,0,0" VerticalAlignment="Top" Width="80"  FontSize="8" FontWeight="Bold"/>
-        <Button Content="Hinzufügen" HorizontalAlignment="Left" Height="16" Margin="400,282,0,0" VerticalAlignment="Top" Width="80"  FontSize="8" FontWeight="Bold"/>
-        <Button Content="Hinzufügen" HorizontalAlignment="Left" Height="16" Margin="400,367,0,0" VerticalAlignment="Top" Width="80"  FontSize="8" FontWeight="Bold"/>
+    <Grid Background="White" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="449*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="Weiter_Button" Content="Weiter" HorizontalAlignment="Left" Height="21" Margin="686,367,0,0" VerticalAlignment="Top" Width="80" Grid.Row="1" Click="Weiter_Button_Click"/>
+
+        <TextBlock x:Name="Karosserie1_Daten_Textbox" HorizontalAlignment="Left" Margin="20,62,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="56" Width="375" Grid.Row="1"/>
+        <TextBlock x:Name="Karosserie2_Daten_Textbox" HorizontalAlignment="Left" Margin="20,141,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="56" Width="375" Grid.Row="1"/>
+        <TextBlock x:Name="Karosserie3_Daten_Textbox" HorizontalAlignment="Left" Margin="20,222,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="56" Width="375" Grid.Row="1"/>
+        <TextBlock x:Name="Karosserie4_Daten_Textbox" HorizontalAlignment="Left" Margin="20,302,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="56" Width="375" Grid.Row="1"/>
+
+        <Button
+            x:Name="Karosserie1_Button"
+            Content="Hinzufügen"
+            HorizontalAlignment="Left"
+            Height="16" Margin="400,121,0,0"
+            VerticalAlignment="Top"
+            Width="80"
+            FontSize="8"
+            FontWeight="Bold"
+            Grid.Row="1"
+            Click="Karosserie1_Button_Click"/>
+        <Button Content="Hinzufügen" HorizontalAlignment="Left" Height="16" Margin="400,201,0,0" VerticalAlignment="Top" Width="80"  FontSize="8" FontWeight="Bold" Grid.Row="1" Click="Karosserie2_Button_Click"/>
+        <Button Content="Hinzufügen" HorizontalAlignment="Left" Height="16" Margin="400,281,0,0" VerticalAlignment="Top" Width="80"  FontSize="8" FontWeight="Bold" Grid.Row="1" Click="Karosserie3_Button_Click"/>
+        <Button Content="Hinzufügen" HorizontalAlignment="Left" Height="16" Margin="400,366,0,0" VerticalAlignment="Top" Width="80"  FontSize="8" FontWeight="Bold" Grid.Row="1" Click="Karosserie4_Button_Click"/>
+
     </Grid>
 </Page>
+

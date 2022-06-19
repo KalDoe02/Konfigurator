@@ -29,9 +29,6 @@ namespace CrazyCarKonfigurator
         public controller()
         {
             InitializeComponent();
-
-
-
         }
 
 
@@ -53,7 +50,26 @@ namespace CrazyCarKonfigurator
 
         private void Controller1_Button_Click(object sender, RoutedEventArgs e)
         {
-            //var c 
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.controllerListe[0].Bezeichnung, Preis = CSV_Input.controllerListe[0].Preis, Gewicht = CSV_Input.controllerListe[0].Gewicht });
+
+        }
+        private void Controller2_Button_Click(object sender, RoutedEventArgs e)
+        {
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.controllerListe[1].Bezeichnung, Preis = CSV_Input.controllerListe[1].Preis, Gewicht = CSV_Input.controllerListe[1].Gewicht });
+
+
+        }
+        private void Controller3_Button_Click(object sender, RoutedEventArgs e)
+        {
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.controllerListe[2].Bezeichnung, Preis = CSV_Input.controllerListe[2].Preis, Gewicht = CSV_Input.controllerListe[2].Gewicht });
+
+
+        }
+        private void Controller4_Button_Click(object sender, RoutedEventArgs e)
+        {
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.controllerListe[3].Bezeichnung, Preis = CSV_Input.controllerListe[3].Preis, Gewicht = CSV_Input.controllerListe[3].Gewicht });
+
+
         }
 
         private void Weiter_Button_Click(object sender, RoutedEventArgs e)

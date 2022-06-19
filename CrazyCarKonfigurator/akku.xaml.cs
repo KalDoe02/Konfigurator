@@ -43,14 +43,28 @@ namespace CrazyCarKonfigurator
 
         }
 
-
-
-    
-
-
         private void Akku1_Button_Click(object sender, RoutedEventArgs e)
         {
-            //var c 
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.akkuListe[0].Bezeichnung, Preis = CSV_Input.akkuListe[0].Preis, Gewicht = CSV_Input.akkuListe[0].Gewicht });
+
+    }
+        private void Akku2_Button_Click(object sender, RoutedEventArgs e)
+        {
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.akkuListe[1].Bezeichnung, Preis = CSV_Input.akkuListe[1].Preis, Gewicht = CSV_Input.akkuListe[1].Gewicht });
+
+
+        }
+        private void Akku3_Button_Click(object sender, RoutedEventArgs e)
+        {
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.akkuListe[2].Bezeichnung, Preis = CSV_Input.akkuListe[2].Preis, Gewicht = CSV_Input.akkuListe[2].Gewicht });
+
+
+        }
+        private void Akku4_Button_Click(object sender, RoutedEventArgs e)
+        {
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.akkuListe[3].Bezeichnung, Preis = CSV_Input.akkuListe[3].Preis, Gewicht = CSV_Input.akkuListe[3].Gewicht });
+
+
         }
 
         private void Weiter_Button_Click(object sender, RoutedEventArgs e)

@@ -48,7 +48,26 @@ namespace CrazyCarKonfigurator
 
         private void Motor1_Button_Click(object sender, RoutedEventArgs e)
         {
-            //var c 
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.motorListe[0].Bezeichnung, Preis = CSV_Input.motorListe[0].Preis, Gewicht = CSV_Input.motorListe[0].Gewicht });
+
+        }
+        private void Motor2_Button_Click(object sender, RoutedEventArgs e)
+        {
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.motorListe[1].Bezeichnung, Preis = CSV_Input.motorListe[1].Preis, Gewicht = CSV_Input.motorListe[1].Gewicht });
+
+
+        }
+        private void Motor3_Button_Click(object sender, RoutedEventArgs e)
+        {
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.motorListe[2].Bezeichnung, Preis = CSV_Input.motorListe[2].Preis, Gewicht = CSV_Input.motorListe[2].Gewicht });
+
+
+        }
+        private void Motor4_Button_Click(object sender, RoutedEventArgs e)
+        {
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.motorListe[3].Bezeichnung, Preis = CSV_Input.motorListe[3].Preis, Gewicht = CSV_Input.motorListe[3].Gewicht });
+
+
         }
 
         private void Weiter_Button_Click(object sender, RoutedEventArgs e)

@@ -6,9 +6,29 @@
       xmlns:local="clr-namespace:CrazyCarKonfigurator"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="zusammenfassung">
+      Title="zusammenfassung" Loaded="Page_Loaded">
 
-    <Grid>
-        
+    <Grid Background="White" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="449*"/>
+        </Grid.RowDefinitions>
+        <DataGrid Name="dataGrid" Grid.Row="2" RenderTransformOrigin="0.522,0.641" Margin="10,92,223,0" ColumnWidth="SizeToHeader">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding Select, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label x:Name="Label1" Content="Label" HorizontalAlignment="Left" Margin="603,378,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Button Content="Berechnen" HorizontalAlignment="Left" Margin="643,419,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Berechnen"/>
+        <Label x:Name="Label2" Content="Label" HorizontalAlignment="Left" Margin="684,378,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.044,0.026"/>
+        <TextBlock HorizontalAlignment="Left" Margin="609,357,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Preis" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="684,357,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Gewicht" VerticalAlignment="Top"/>
     </Grid>
 </Page>
+

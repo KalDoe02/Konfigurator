@@ -33,9 +33,9 @@ namespace CrazyCarKonfigurator
             string[] A = { "A", "B", "C", "D" };
             for (int i = 0; i < 4; i++)
             {
-                A[i] = CSV_Input.sensorListe[0].Bezeichnung + "\n" + "Preis: " + CSV_Input.sensorListe[0].Preis.ToString() + " €" + "\t" + "\t" + "Gewicht: " +
-                CSV_Input.sensorListe[0].Gewicht.ToString() + " g" + "\t" + "Reichweite: " + CSV_Input.sensorListe[0].Reichweite +
-                "\n" + "Sensorart: " + CSV_Input.sensorListe[0].Sensorart;
+                A[i] = CSV_Input.sensorListe[i].Bezeichnung + "\n" + "Preis: " + CSV_Input.sensorListe[i].Preis.ToString() + " €" + "\t" + "\t" + "Gewicht: " +
+                CSV_Input.sensorListe[i].Gewicht.ToString() + " g" + "\t" + "Reichweite: " + CSV_Input.sensorListe[i].Reichweite +
+                "\n" + "Sensorart: " + CSV_Input.sensorListe[i].Sensorart;
             }
             Sensor1_Daten_Textbox.Text = A[0];
             Sensor2_Daten_Textbox.Text = A[1];
@@ -45,7 +45,26 @@ namespace CrazyCarKonfigurator
         }
         private void Sensor1_Button_Click(object sender, RoutedEventArgs e)
         {
-            //var c 
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.sensorListe[0].Bezeichnung+ "\n" + ":)", Preis = CSV_Input.sensorListe[0].Preis, Gewicht = CSV_Input.sensorListe[0].Gewicht });
+
+        }
+        private void Sensor2_Button_Click(object sender, RoutedEventArgs e)
+        {
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.sensorListe[1].Bezeichnung, Preis = CSV_Input.sensorListe[1].Preis, Gewicht = CSV_Input.sensorListe[1].Gewicht });
+
+
+        }
+        private void Sensor3_Button_Click(object sender, RoutedEventArgs e)
+        {
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.sensorListe[2].Bezeichnung, Preis = CSV_Input.sensorListe[2].Preis, Gewicht = CSV_Input.sensorListe[2].Gewicht });
+
+
+        }
+        private void Sensor4_Button_Click(object sender, RoutedEventArgs e)
+        {
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.sensorListe[3].Bezeichnung, Preis = CSV_Input.sensorListe[3].Preis, Gewicht = CSV_Input.sensorListe[3].Gewicht });
+
+
         }
 
         private void Weiter_Button_Click(object sender, RoutedEventArgs e)

@@ -16,7 +16,6 @@ namespace Klassenbibliothek
         public string UART { get; set; }
         public string I2C { get; set; }
 
-      
 
     }
 }

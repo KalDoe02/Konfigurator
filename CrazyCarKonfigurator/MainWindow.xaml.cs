@@ -11,10 +11,12 @@ namespace CrazyCarKonfigurator
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static MainWindow myMainWindow; // Creatng a static instance of MainWindow
         public MainWindow()
         {
             InitializeComponent();
-            AddtoAuswahl();
+            myMainWindow = this;
+            //  AddtoAuswahl();
 
         }
 
@@ -27,6 +29,7 @@ namespace CrazyCarKonfigurator
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             FrameWithinGrid.Navigate(new System.Uri("sensor.xaml", UriKind.RelativeOrAbsolute));
+            
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -59,10 +62,22 @@ namespace CrazyCarKonfigurator
             FrameWithinGrid.Navigate(new System.Uri("zusammenfassung.xaml", UriKind.RelativeOrAbsolute));
         }
 
-        private void AddtoAuswahl()
+        public static string[] p = { "d", "dd", " ", "", "", "", "", "", "", "", "" };
+
+
+        public void addtolist(string x, ref string[] p)
         {
-            string[] test = { "Test1", "Test2" };
-            Aktuelle_Auswahl_Liste.ItemsSource = test;
+            for (int i = 0; i < p.Length; i++)
+             {
+                if (string.IsNullOrEmpty(p[i]))
+                 {
+                     MainWindow.p[i] = x;
+                     break;
+                 }
+
+            }
+            Aktuelle_Auswahl_Liste.ItemsSource = p;
+
         }
 
     }

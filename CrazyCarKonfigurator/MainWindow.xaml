@@ -20,6 +20,7 @@
         <Button Content="Zusammenfassung" HorizontalAlignment="Left" Height="20" Margin="637,23,0,0" VerticalAlignment="Top" Width="136" Click="Button_Click_7"/>
         <ListBox
             x:Name="Aktuelle_Auswahl_Liste"
+            x:FieldModifier="public"
             Grid.Row="1"
             d:ItemsSource="{d:SampleData ItemCount=5}" 
             Margin="565,62,0,0" 

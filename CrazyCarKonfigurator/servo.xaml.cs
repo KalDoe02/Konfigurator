@@ -42,13 +42,33 @@ namespace CrazyCarKonfigurator
             Servo2_Daten_Textbox.Text = A[1];
             Servo3_Daten_Textbox.Text = A[2];
             Servo4_Daten_Textbox.Text = A[3];
+    
 
         }
 
 
-        private void Motor1_Button_Click(object sender, RoutedEventArgs e)
+        private void Servo1_Button_Click(object sender, RoutedEventArgs e)
         {
-            //var c 
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.servoListe[0].Bezeichnung, Preis = CSV_Input.servoListe[0].Preis, Gewicht = CSV_Input.servoListe[0].Gewicht });
+
+        }
+        private void Servo2_Button_Click(object sender, RoutedEventArgs e)
+        {
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.servoListe[1].Bezeichnung, Preis = CSV_Input.servoListe[1].Preis, Gewicht = CSV_Input.servoListe[1].Gewicht });
+
+
+        }
+        private void Servo3_Button_Click(object sender, RoutedEventArgs e)
+        {
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.servoListe[2].Bezeichnung, Preis = CSV_Input.servoListe[2].Preis, Gewicht = CSV_Input.servoListe[2].Gewicht });
+
+
+        }
+        private void Servo4_Button_Click(object sender, RoutedEventArgs e)
+        {
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.servoListe[3].Bezeichnung, Preis = CSV_Input.servoListe[3].Preis, Gewicht = CSV_Input.servoListe[3].Gewicht });
+
+
         }
 
         private void Weiter_Button_Click(object sender, RoutedEventArgs e)

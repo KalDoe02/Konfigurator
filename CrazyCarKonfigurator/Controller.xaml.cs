@@ -38,70 +38,16 @@ namespace CrazyCarKonfigurator
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             //Testname = Controller1_Textbox.Text;
-            CSV_Input i = new CSV_Input();
-
-            Controller1_Name_Textbox.Text = i.controllerListe[0].Bezeichnung;
-            Controller1_Daten_Textbox.Text = "Preis: " + i.controllerListe[0].Preis.ToString() + " €" + "\t" + "\t" + "Gewicht: " +
-                                             i.controllerListe[0].Gewicht.ToString() + " g";
-            if (i.controllerListe[0].UART){
-                Controller1_Daten_Textbox.Text += "\t" + "UART Schnittstelle ";
-            }
-            Controller1_Daten_Textbox.Text += "\n";
-
-            Controller1_Daten_Textbox.Text += "Taktrate: " + i.controllerListe[0].Taktrate.ToString() + " Hz" + "\t" + "Pin Anzahl: " +
-                                             i.controllerListe[0].PinAnzahl.ToString();
-            if (i.controllerListe[0].I2C){
-                Controller1_Daten_Textbox.Text += "\t" + "I2C Schnittstelle ";
-            }
-
-
-            Controller2_Name_Textbox.Text = i.controllerListe[1].Bezeichnung;
-            Controller2_Daten_Textbox.Text = "Preis: " + i.controllerListe[1].Preis.ToString() + " €" + "\t" + "\t" + "Gewicht: " +
-                                             i.controllerListe[1].Gewicht.ToString() + " g";
-            if (i.controllerListe[1].UART)
+            string[] A = { "A", "B", "C", "D" };
+            for (int i = 0; i < 4; i++)
             {
-                Controller2_Daten_Textbox.Text += "\t" + "UART Schnittstelle ";
+                A[i] = CSV_Input.controllerListe[i].Bezeichnung + "\n" + "Preis: " + CSV_Input.controllerListe[i].Preis.ToString() + " €" + "\t" + "Gewicht: " 
+                + CSV_Input.controllerListe[i].Gewicht.ToString() + " g" + "\t" + "UART:  " + CSV_Input.controllerListe[i].UART + "\t" + "l2c:  " + CSV_Input.controllerListe[i].I2C;
             }
-            Controller2_Daten_Textbox.Text += "\n";
-
-            Controller2_Daten_Textbox.Text += "Taktrate: " + i.controllerListe[1].Taktrate.ToString() + " Hz" + "\t" + "Pin Anzahl: " +
-                                             i.controllerListe[1].PinAnzahl.ToString();
-            if (i.controllerListe[1].I2C)
-            {
-                Controller2_Daten_Textbox.Text += "\t" + "I2C Schnittstelle ";
-            }
-
-            Controller3_Name_Textbox.Text = i.controllerListe[2].Bezeichnung;
-            Controller3_Daten_Textbox.Text = "Preis: " + i.controllerListe[2].Preis.ToString() + " €" + "\t" + "\t" + "Gewicht: " +
-                                             i.controllerListe[2].Gewicht.ToString() + " g";
-            if (i.controllerListe[2].UART)
-            {
-                Controller3_Daten_Textbox.Text += "\t" + "UART Schnittstelle ";
-            }
-            Controller3_Daten_Textbox.Text += "\n";
-
-            Controller3_Daten_Textbox.Text += "Taktrate: " + i.controllerListe[2].Taktrate.ToString() + " Hz" + "\t" + "Pin Anzahl: " +
-                                             i.controllerListe[2].PinAnzahl.ToString();
-            if (i.controllerListe[2].I2C)
-            {
-                Controller3_Daten_Textbox.Text += "\t" + "I2C Schnittstelle ";
-            }
-
-            Controller4_Name_Textbox.Text = i.controllerListe[3].Bezeichnung;
-            Controller4_Daten_Textbox.Text = "Preis: " + i.controllerListe[3].Preis.ToString() + " €" + "\t" + "\t" + "Gewicht: " +
-                                             i.controllerListe[3].Gewicht.ToString() + " g";
-            if (i.controllerListe[3].UART)
-            {
-                Controller4_Daten_Textbox.Text += "\t" + "UART Schnittstelle ";
-            }
-            Controller4_Daten_Textbox.Text += "\n";
-
-            Controller4_Daten_Textbox.Text += "Taktrate: " + i.controllerListe[3].Taktrate.ToString() + " Hz" + "\t" + "Pin Anzahl: " +
-                                             i.controllerListe[3].PinAnzahl.ToString();
-            if (i.controllerListe[3].I2C)
-            {
-                Controller4_Daten_Textbox.Text += "\t" + "I2C Schnittstelle ";
-            }
+            Controller1_Daten_Textbox.Text = A[0];
+            Controller2_Daten_Textbox.Text = A[1];
+            Controller3_Daten_Textbox.Text = A[2];
+            Controller4_Daten_Textbox.Text = A[3];
 
         }
 

@@ -13,8 +13,8 @@ namespace Klassenbibliothek
         public int Gewicht { get; set; }
         public double Taktrate { get; set; }
         public int PinAnzahl { get; set; }
-        public bool UART { get; set; }
-        public bool I2C { get; set; }
+        public string UART { get; set; }
+        public string I2C { get; set; }
 
       
 

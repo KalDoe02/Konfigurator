@@ -30,38 +30,17 @@ namespace CrazyCarKonfigurator
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             //Testname = Controller1_Textbox.Text;
-            CSV_Input i = new CSV_Input();
-            Sensor1_Name_Textbox.Text = i.sensorListe[0].Bezeichnung;
-            Sensor1_Daten_Textbox.Text = "Preis: " + i.sensorListe[0].Preis.ToString() + " €" + "\t" + "\t" + "Gewicht: " +
-                                                         i.sensorListe[0].Gewicht.ToString() + " g";
-            Sensor1_Daten_Textbox.Text += "\t" + "Reichweite: " + i.sensorListe[0].Reichweite;
-            Sensor1_Daten_Textbox.Text += "\n";
-            Sensor1_Daten_Textbox.Text += "Sensorart: " + i.sensorListe[0].Sensorart;
-
-
-            //
-            Sensor2_Name_Textbox.Text = i.sensorListe[1].Bezeichnung;
-            Sensor2_Daten_Textbox.Text = "Preis: " + i.sensorListe[1].Preis.ToString() + " €" + "\t" + "\t" + "Gewicht: " +
-                                                 i.sensorListe[1].Gewicht.ToString() + " g";
-
-            Sensor2_Daten_Textbox.Text += "\t" + "Reichweite: " + i.sensorListe[1].Reichweite;
-            Sensor2_Daten_Textbox.Text += "\n";
-            Sensor2_Daten_Textbox.Text += "Sensorart: " + i.sensorListe[1].Sensorart;
-
-            Sensor3_Name_Textbox.Text = i.sensorListe[2].Bezeichnung;
-            Sensor3_Daten_Textbox.Text = "Preis: " + i.sensorListe[2].Preis.ToString() + " €" + "\t" + "\t" + "Gewicht: " +
-                                     i.sensorListe[2].Gewicht.ToString() + " g";
-            Sensor3_Daten_Textbox.Text += "\t" + "Reichweite: " + i.sensorListe[2].Reichweite;
-            Sensor3_Daten_Textbox.Text += "\n";
-            Sensor3_Daten_Textbox.Text += "Sensorart: " + i.sensorListe[2].Sensorart;
-
-
-            Sensor4_Name_Textbox.Text = i.sensorListe[3].Bezeichnung;
-            Sensor4_Daten_Textbox.Text = "Preis: " + i.sensorListe[3].Preis.ToString() + " €" + "\t" + "\t" + "Gewicht: " +
-                                     i.sensorListe[3].Gewicht.ToString() + " g";
-            Sensor4_Daten_Textbox.Text += "\t" + "Reichweite: " + i.sensorListe[3].Reichweite;
-            Sensor4_Daten_Textbox.Text += "\n";
-            Sensor4_Daten_Textbox.Text += "Sensorart: " + i.sensorListe[3].Sensorart;
+            string[] A = { "A", "B", "C", "D" };
+            for (int i = 0; i < 4; i++)
+            {
+                A[i] = CSV_Input.sensorListe[0].Bezeichnung + "\n" + "Preis: " + CSV_Input.sensorListe[0].Preis.ToString() + " €" + "\t" + "\t" + "Gewicht: " +
+                CSV_Input.sensorListe[0].Gewicht.ToString() + " g" + "\t" + "Reichweite: " + CSV_Input.sensorListe[0].Reichweite +
+                "\n" + "Sensorart: " + CSV_Input.sensorListe[0].Sensorart;
+            }
+            Sensor1_Daten_Textbox.Text = A[0];
+            Sensor2_Daten_Textbox.Text = A[1];
+            Sensor3_Daten_Textbox.Text = A[2];
+            Sensor4_Daten_Textbox.Text = A[3];
 
         }
         private void Sensor1_Button_Click(object sender, RoutedEventArgs e)

@@ -29,34 +29,20 @@ namespace CrazyCarKonfigurator
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             //Testname = Controller1_Textbox.Text;
-            CSV_Input i = new CSV_Input();
-            Motor1_Name_Textbox.Text = i.motorListe[0].Bezeichnung;
-            Motor1_Daten_Textbox.Text = "Preis: " + i.motorListe[0].Preis.ToString() + " €" + "\t" + "Gewicht: " +
-                                                        i.motorListe[0].Gewicht.ToString() + " g";
-            Motor1_Daten_Textbox.Text += "\t" + "Nenndrehzahl: " + i.motorListe[0].Nenndrehzahl+ " U/Min";
-            Motor1_Daten_Textbox.Text += "\n";
-            Motor1_Daten_Textbox.Text += "Stromaufnahme: " + i.motorListe[0].Stromaufnahme + " A";
+            string[] A = {"A","B","C","D"};
+            for (int i = 0; i < 4; i++)
+            {
+                A[i]= CSV_Input.motorListe[i].Bezeichnung + "\n" + "Preis:" + CSV_Input.motorListe[i].Preis.ToString() + " €" + "\t" + "Gewicht: " +
+                CSV_Input.motorListe[i].Gewicht.ToString() + " g"+ "\t" + "Nenndrehzahl: " + CSV_Input.motorListe[0].Nenndrehzahl + " U/Min"
+                + "\n" + "Stromaufnahme: " + CSV_Input.motorListe[0].Stromaufnahme + " A";
+            }
+            Motor1_Daten_Textbox.Text = A[0];
+            Motor2_Daten_Textbox.Text = A[1];
+            Motor3_Daten_Textbox.Text = A[2];
+            Motor4_Daten_Textbox.Text = A[3];
 
-            Motor2_Name_Textbox.Text = i.motorListe[1].Bezeichnung;
-            Motor2_Daten_Textbox.Text = "Preis: " + i.motorListe[1].Preis.ToString() + " €" + "\t" + "Gewicht: " +
-                                                        i.motorListe[0].Gewicht.ToString() + " g";
-            Motor2_Daten_Textbox.Text += "\t" + "Nenndrehzahl: " + i.motorListe[1].Nenndrehzahl + " U/Min";
-            Motor2_Daten_Textbox.Text += "\n";
-            Motor2_Daten_Textbox.Text += "Stromaufnahme: " + i.motorListe[1].Stromaufnahme + " A";
 
-            Motor3_Name_Textbox.Text = i.motorListe[2].Bezeichnung;
-            Motor3_Daten_Textbox.Text = "Preis: " + i.motorListe[2].Preis.ToString() + " €" + "\t" + "Gewicht: " +
-                                                        i.motorListe[2].Gewicht.ToString() + " g";
-            Motor3_Daten_Textbox.Text += "\t" + "Nenndrehzahl: " + i.motorListe[2].Nenndrehzahl + " U/Min";
-            Motor3_Daten_Textbox.Text += "\n";
-            Motor3_Daten_Textbox.Text += "Stromaufnahme: " + i.motorListe[2].Stromaufnahme + " A";
 
-            Motor4_Name_Textbox.Text = i.motorListe[3].Bezeichnung;
-            Motor4_Daten_Textbox.Text = "Preis: " + i.motorListe[3].Preis.ToString() + " €" + "\t" + "Gewicht: " +
-                                                        i.motorListe[3].Gewicht.ToString() + " g";
-            Motor4_Daten_Textbox.Text += "\t" + "Nenndrehzahl: " + i.motorListe[3].Nenndrehzahl + " U/Min";
-            Motor4_Daten_Textbox.Text += "\n";
-            Motor4_Daten_Textbox.Text += "Stromaufnahme: " + i.motorListe[3].Stromaufnahme + " A";
         }
 
 

@@ -12,11 +12,11 @@ namespace Klassenbibliothek
 
     public class CSV_Input
     {
-        public List<Controller> controllerListe { get; set; } = GetControllers();
-        public List<Sensor> sensorListe { get; set; } = getSensors();
-        public List<Motor> motorListe { get; set; } = GetMotors();
-        public List<Servo> servoListe { get; set; } = GetServos();
-        public List<Akku> akkuListe { get; set; } = GetAkkus();
+        public static List<Controller> controllerListe { get; set; } = GetControllers();
+        public static List<Sensor> sensorListe { get; set; } = getSensors();
+        public static List<Motor> motorListe { get; set; } = GetMotors();
+        public static List<Servo> servoListe { get; set; } = GetServos();
+        public static List<Akku> akkuListe { get; set; } = GetAkkus();
 
 
         public static List<Controller> GetControllers()
@@ -42,8 +42,8 @@ namespace Klassenbibliothek
                 int Gewicht = int.Parse(lineData[2]);
                 double Taktrate = double.Parse(lineData[3]);
                 int PinAnzahl = int.Parse(lineData[4]);
-                bool UART = bool.Parse(lineData[5]);
-                bool I2C = bool.Parse(lineData[6]);
+                string UART = lineData[5];
+                string I2C = lineData[6];
                 list.Add(new Controller
                 {
                     Bezeichnung = Bezeichnung,
@@ -107,7 +107,7 @@ namespace Klassenbibliothek
                 // Bezeichnung;Preis;Gewicht;Taktrate;PinAnzahl;UART;I2C
                 // ATMEGA32;5,7;6;16.000.000,00;40;true;false
 
-                string[] lineData = csvLines[i].Split(',');
+                string[] lineData = csvLines[i].Split(';');
 
 
                 string Bezeichnung = lineData[0];
@@ -141,7 +141,7 @@ namespace Klassenbibliothek
                 // Bezeichnung;Preis;Gewicht;Taktrate;PinAnzahl;UART;I2C
                 // ATMEGA32;5,7;6;16.000.000,00;40;true;false
 
-                string[] lineData = csvLines[i].Split(',');
+                string[] lineData = csvLines[i].Split(';');
 
 
                 string Bezeichnung = lineData[0];
@@ -174,7 +174,7 @@ namespace Klassenbibliothek
                 // Bezeichnung;Preis;Gewicht;Taktrate;PinAnzahl;UART;I2C
                 // ATMEGA32;5,7;6;16.000.000,00;40;true;false
 
-                string[] lineData = csvLines[i].Split(',');
+                string[] lineData = csvLines[i].Split(';');
 
 
                 string Bezeichnung = lineData[0];

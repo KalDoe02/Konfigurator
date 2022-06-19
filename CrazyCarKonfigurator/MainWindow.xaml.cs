@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Navigation;
+using Klassenbibliothek;
+using CrazyCarKonfigurator;
 
 namespace CrazyCarKonfigurator
 {
@@ -13,7 +15,9 @@ namespace CrazyCarKonfigurator
         {
             InitializeComponent();
             AddtoAuswahl();
+
         }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

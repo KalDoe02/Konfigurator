@@ -15,21 +15,6 @@
         </Grid.RowDefinitions>
         <Button x:Name="Weiter_Button" Content="Weiter" HorizontalAlignment="Left" Height="21" Margin="686,367,0,0" VerticalAlignment="Top" Width="80" Grid.Row="1" Click="Weiter_Button_Click"/>
 
-        <TextBlock 
-            x:Name="Controller1_Name_Textbox" 
-            HorizontalAlignment="Left" 
-            Height="19" Margin="20,62,0,0" 
-            TextWrapping="Wrap" 
-            VerticalAlignment="Top" 
-            Width="140" 
-            Grid.Row="1"><Run 
-            Language="de-de" 
-            Text="Controller 1"/></TextBlock>
-
-        <TextBlock x:Name="Controller2_Name_Textbox" HorizontalAlignment="Left" Height="19" Margin="20,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Grid.Row="1"><Run Text="Controller "/><Run Language="de-de" Text="2"/></TextBlock>
-        <TextBlock x:Name="Controller3_Name_Textbox" HorizontalAlignment="Left" Height="19" Margin="20,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Grid.Row="1"><Run Text="Controller "/><Run Language="de-de" Text="3"/></TextBlock>
-        <TextBlock x:Name="Controller4_Name_Textbox" HorizontalAlignment="Left" Height="19" Margin="20,302,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Grid.Row="1"><Run Text="Controller "/><Run Language="de-de" Text="4"/><LineBreak/><Run Language="de-de"/></TextBlock>
-
         <TextBlock x:Name="Controller1_Daten_Textbox" HorizontalAlignment="Left" Margin="20,81,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="56" Width="375" Grid.Row="1"/>
         <TextBlock x:Name="Controller2_Daten_Textbox" HorizontalAlignment="Left" Margin="20,161,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="56" Width="375" Grid.Row="1"/>
         <TextBlock x:Name="Controller3_Daten_Textbox" HorizontalAlignment="Left" Margin="20,241,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="56" Width="375" Grid.Row="1"/>

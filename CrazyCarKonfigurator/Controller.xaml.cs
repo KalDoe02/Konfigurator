@@ -36,7 +36,7 @@ namespace CrazyCarKonfigurator
         {
             InitializeComponent();
         }
-        static string[] A = { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
+        string[] A = new string[100];
         private void Page_Loaded(object sender, RoutedEventArgs e)
 
         {

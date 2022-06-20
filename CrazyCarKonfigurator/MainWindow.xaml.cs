@@ -65,7 +65,7 @@ namespace CrazyCarKonfigurator
 
         public void Listauswahl()
         {
-            string[] p = { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
+            string[] p = new string[100];
 
             for (int i = 0; i < CSV_Input.summary.Count; i++)
             {

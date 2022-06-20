@@ -264,37 +264,5 @@ namespace Klassenbibliothek
             }
             return list;
         }
-        public static List<Zusammenfassung> getZusammenfassung()
-        {
-            var list = new List<Zusammenfassung>();
-
-            // CSV Daten ín einzelne Zeilen einlesen
-            string[] csvLines = File.ReadAllLines(@"..\..\..\..\Klassenbibliothek\Database\Zusammenfassung.csv");
-
-
-            // Teile jede Reihe in Spalten
-            for (int i = 1; i < csvLines.Length; i++)  // i mit 1 initialisieren, damit erste Zeile übersprungen wird Headerzeile
-            {
-
-                string[] lineData = csvLines[i].Split(';');
-
-
-                string Bezeichnung = lineData[0];
-                float Preis = float.Parse(lineData[1]);
-                int Gewicht = int.Parse(lineData[2]);
-                int Laenge = int.Parse(lineData[3]);
-                int Breite = int.Parse(lineData[4]);
-                int Radstand = int.Parse(lineData[5]);
-                list.Add(new Zusammenfassung
-                {
-                    Bezeichnung = Bezeichnung,
-                    Preis = Preis,
-                    Gewicht = Gewicht,
-                });
-            }
-            return list;
-        }
-
-
     }
 }

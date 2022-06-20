@@ -28,6 +28,9 @@ namespace CrazyCarKonfigurator
         }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            MainWindow.myMainWindow.Listauswahl(); //updates side list
+            MainWindow.myMainWindow.Aktuelle_Auswahl_Liste.Visibility = Visibility.Visible; // Shows the side list
+
             //Testname = Controller1_Textbox.Text;
             string[] A = { "A", "B", "C", "D" };
             for (int i = 0; i < 4; i++)
@@ -49,24 +52,24 @@ namespace CrazyCarKonfigurator
         private void Karosserie1_Button_Click(object sender, RoutedEventArgs e)
         {
             CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.karosserieListe[0].Bezeichnung, Preis = CSV_Input.karosserieListe[0].Preis, Gewicht = CSV_Input.karosserieListe[0].Gewicht });
-
+            MainWindow.myMainWindow.Listauswahl();
         }
         private void Karosserie2_Button_Click(object sender, RoutedEventArgs e)
         {
             CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.karosserieListe[1].Bezeichnung, Preis = CSV_Input.karosserieListe[1].Preis, Gewicht = CSV_Input.karosserieListe[1].Gewicht });
-
+            MainWindow.myMainWindow.Listauswahl();
 
         }
         private void Karosserie3_Button_Click(object sender, RoutedEventArgs e)
         {
             CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.karosserieListe[2].Bezeichnung, Preis = CSV_Input.karosserieListe[2].Preis, Gewicht = CSV_Input.karosserieListe[2].Gewicht });
-
+            MainWindow.myMainWindow.Listauswahl();
 
         }
         private void Karosserie4_Button_Click(object sender, RoutedEventArgs e)
         {
             CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.karosserieListe[3].Bezeichnung, Preis = CSV_Input.karosserieListe[3].Preis, Gewicht = CSV_Input.karosserieListe[3].Gewicht });
-
+            MainWindow.myMainWindow.Listauswahl();
 
         }
 

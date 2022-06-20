@@ -22,6 +22,7 @@
             x:Name="Aktuelle_Auswahl_Liste"
             x:FieldModifier="public"
             Grid.Row="1"
+            Visibility = "Visible"
             d:ItemsSource="{d:SampleData ItemCount=5}" 
             Margin="565,62,0,0" 
             HorizontalAlignment="Left" 

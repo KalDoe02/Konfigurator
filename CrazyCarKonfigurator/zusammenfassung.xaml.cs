@@ -34,29 +34,33 @@ namespace CrazyCarKonfigurator
         private void Page_Loaded(object sender, RoutedEventArgs e)
 
         {
-            dataGrid.ItemsSource = CSV_Input.summary;
-            Label1.Content = 0;
+            dataGrid.ItemsSource = CSV_Input.summary; // Forwards the summary data to the DataGrid
+            berechnen(); //calculates price and weight when page is loaded
+            MainWindow.myMainWindow.Aktuelle_Auswahl_Liste.Visibility = Visibility.Collapsed;
 
 
         }
-        private void Berechnen(object sender, RoutedEventArgs e)
+
+        private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-           float preis = 0;
-           float gewicht = 0;
-           for(int i = 0; i < CSV_Input.summary.Count; i++)
+
+        }
+        private void button_click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.myMainWindow.Listauswahl();
+            berechnen(); //recalculates when delete is pressed
+        }
+        private void berechnen()
+        {
+            float preis = 0;
+            float gewicht = 0;
+            for (int i = 0; i < CSV_Input.summary.Count; i++) // Preis & Weight Calculation at Page Loaded
             {
                 preis = CSV_Input.summary[i].Preis + preis;
                 gewicht = CSV_Input.summary[i].Gewicht + gewicht;
-
             }
-            Label1.Content = preis;
-            Label2.Content = gewicht;
-
-
-
-
+            Label1.Content = preis.ToString("0.00") + " €";
+            Label2.Content = gewicht + " g";
         }
-
-
     }
 }

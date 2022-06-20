@@ -17,10 +17,10 @@ namespace CrazyCarKonfigurator
             InitializeComponent();
             myMainWindow = this;
             //  AddtoAuswahl();
+            MainWindow.myMainWindow.Aktuelle_Auswahl_Liste.Visibility = Visibility.Visible;
+
 
         }
-
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             FrameWithinGrid.Navigate(new System.Uri("controller.xaml", UriKind.RelativeOrAbsolute));
@@ -29,7 +29,7 @@ namespace CrazyCarKonfigurator
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             FrameWithinGrid.Navigate(new System.Uri("sensor.xaml", UriKind.RelativeOrAbsolute));
-            
+
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -62,23 +62,21 @@ namespace CrazyCarKonfigurator
             FrameWithinGrid.Navigate(new System.Uri("zusammenfassung.xaml", UriKind.RelativeOrAbsolute));
         }
 
-        public static string[] p = { "d", "dd", " ", "", "", "", "", "", "", "", "" };
 
 
-        public void addtolist(string x, ref string[] p)
+        public void Listauswahl()
         {
-            for (int i = 0; i < p.Length; i++)
-             {
-                if (string.IsNullOrEmpty(p[i]))
-                 {
-                     MainWindow.p[i] = x;
-                     break;
-                 }
+            string[] p = { "", "", "", "", "", "", "", "", "", "", "", "" };
+
+            for (int i = 0; i < CSV_Input.summary.Count; i++)
+            {
+                p[i] = CSV_Input.summary[i].Bezeichnung;
 
             }
-            Aktuelle_Auswahl_Liste.ItemsSource = p;
+            MainWindow.myMainWindow.Aktuelle_Auswahl_Liste.ItemsSource = p;
 
         }
+
 
     }
 }

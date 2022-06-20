@@ -35,6 +35,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="309,357,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Preis" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="384,357,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Gewicht" VerticalAlignment="Top"/>
         <Button x:Name="button" Content="Berechnen" HorizontalAlignment="Left" Margin="442,357,0,0" Grid.Row="1" VerticalAlignment="Top" Height="47" Width="83" Click="button1_click"/>
+        <Button x:Name="button1" Content="Reset List" HorizontalAlignment="Left" Margin="673,357,0,0" Grid.Row="1" VerticalAlignment="Top" Click="resetbtn" Height="47" Width="94" />
     </Grid>
 </Page>
 

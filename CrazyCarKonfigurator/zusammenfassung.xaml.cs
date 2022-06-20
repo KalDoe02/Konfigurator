@@ -65,6 +65,12 @@ namespace CrazyCarKonfigurator
         {
             berechnen(); //recalculates when delete is pressed
         }
+        private void resetbtn(object sender, RoutedEventArgs e)
+        {
+            CSV_Input.summary.Clear(); //recalculates when delete is pressed   
+            dataGrid.Items.Refresh();
+            berechnen();
+        }
     }
 
 }

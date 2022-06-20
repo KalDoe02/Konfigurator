@@ -18,7 +18,7 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Content="Add"
-                                    Width="100"
+                                    Width="85"
                             Click="button_click" />
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>

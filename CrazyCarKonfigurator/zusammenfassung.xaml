@@ -13,7 +13,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="449*"/>
         </Grid.RowDefinitions>
-        <DataGrid Name="dataGrid" Grid.Row="1" CanUserAddRows="false" RenderTransformOrigin="0.522,0.641" Margin="10,50,10,100"  AutoGenerateColumns="False">
+        <DataGrid Name="dataGrid" Grid.Row="1" CanUserAddRows="false" RenderTransformOrigin="0.522,0.641" Margin="10,120,10,100"  AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Bezeichnung" Width="400" Binding="{Binding Bezeichnung}"/>
                 <DataGridTemplateColumn Header="Delete">

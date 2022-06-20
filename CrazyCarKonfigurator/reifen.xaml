@@ -15,10 +15,10 @@
         </Grid.RowDefinitions>
         <Button x:Name="Weiter_Button" Content="Weiter" HorizontalAlignment="Left" Height="21" Margin="686,367,0,0" VerticalAlignment="Top" Width="80" Grid.Row="1" Click="Weiter_Button_Click"/>
 
-        <TextBlock x:Name="Reifen1_Daten_Textbox" HorizontalAlignment="Left" Margin="20,62,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="56" Width="375" Grid.Row="1"/>
-        <TextBlock x:Name="Reifen2_Daten_Textbox" HorizontalAlignment="Left" Margin="20,141,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="56" Width="375" Grid.Row="1"/>
-        <TextBlock x:Name="Reifen3_Daten_Textbox" HorizontalAlignment="Left" Margin="20,222,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="56" Width="375" Grid.Row="1"/>
-        <TextBlock x:Name="Reifen4_Daten_Textbox" HorizontalAlignment="Left" Margin="20,302,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="56" Width="375" Grid.Row="1"/>
+        <TextBlock x:Name="Reifen1_Daten_Textbox" HorizontalAlignment="Left" Margin="20,120,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="56" Width="375" Grid.Row="1"/>
+        <TextBlock x:Name="Reifen2_Daten_Textbox" HorizontalAlignment="Left" Margin="20,200,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="56" Width="375" Grid.Row="1"/>
+        <TextBlock x:Name="Reifen3_Daten_Textbox" HorizontalAlignment="Left" Margin="20,280,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="56" Width="375" Grid.Row="1"/>
+        <TextBlock x:Name="Reifen4_Daten_Textbox" HorizontalAlignment="Left" Margin="20,360,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="56" Width="375" Grid.Row="1"/>
 
         <Button
             x:Name="Reifen1_Button"

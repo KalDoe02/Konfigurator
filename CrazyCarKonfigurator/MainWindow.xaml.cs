@@ -65,7 +65,7 @@ namespace CrazyCarKonfigurator
 
         public void Listauswahl()
         {
-            string[] p = { "", "", "", "", "", "", "", "", "", "", "", "" };
+            string[] p = { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
 
             for (int i = 0; i < CSV_Input.summary.Count; i++)
             {
@@ -75,7 +75,5 @@ namespace CrazyCarKonfigurator
             MainWindow.myMainWindow.Aktuelle_Auswahl_Liste.ItemsSource = p;
 
         }
-
-
     }
 }

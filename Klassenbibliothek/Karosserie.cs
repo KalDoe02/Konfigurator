@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace Klassenbibliothek
 {
-    public class Karosserie
+    public class Karosserie : Bauteil
     {
-        public string Bezeichnung { get; set; }
-        public float Preis { get; set; }
-        public int Gewicht { get; set; }
         public int Laenge { get; set; }
         public int Breite { get; set; }
         public int Radstand { get; set; }

@@ -6,18 +6,11 @@ using System.Threading.Tasks;
 
 namespace Klassenbibliothek
 {
-    public class Akku
+    public class Akku : Bauteil
     {
-        public string Bezeichnung { get; set; }
-        public float Preis { get; set; }
-        public int Gewicht { get; set; }
         public float Spannung { get; set; }
         public int capacity { get; set; }
         public string art { get; set; }
         public int anzahlzellen { get; set; }
-
-
-
-
     }
 }

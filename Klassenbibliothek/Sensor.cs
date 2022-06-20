@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace Klassenbibliothek
 {
-    public class Sensor
+    public class Sensor : Bauteil
     {
-        public string Bezeichnung { get; set; }
-        public float Preis { get; set; }
-        public int Gewicht { get; set; }
         public int Reichweite { get; set; }
         public string Sensorart { get; set; }
         public string Schnittstelle { get; set; }

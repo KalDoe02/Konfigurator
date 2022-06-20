@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Klassenbibliothek
 {
-    public class Servo : Bauteil
+    public class Bauteil
     {
-        public float Stellzeit { get; set; }
-        public float Drehmoment { get; set; }
-
+        public string Bezeichnung { get; set; }
+        public float Preis { get; set; }
+        public int Gewicht { get; set; }
     }
 }

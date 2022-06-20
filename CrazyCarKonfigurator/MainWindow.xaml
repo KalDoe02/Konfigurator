@@ -23,7 +23,7 @@
             x:FieldModifier="public"
             Visibility = "Visible"
             d:ItemsSource="{d:SampleData ItemCount=5}" 
-            Margin="502,110,0,0" 
+            Margin="520,110,0,0" 
             HorizontalAlignment="Left" 
             Width="263" 
             Height="260" 

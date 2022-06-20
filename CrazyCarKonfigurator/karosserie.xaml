@@ -10,31 +10,23 @@
 
     <Grid Background="White" >
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="449*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="Weiter_Button" Content="Weiter" HorizontalAlignment="Left" Height="21" Margin="686,367,0,0" VerticalAlignment="Top" Width="80" Grid.Row="1" Click="Weiter_Button_Click"/>
-
-        <TextBlock x:Name="Karosserie1_Daten_Textbox" HorizontalAlignment="Left" Margin="20,120,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="56" Width="375" Grid.Row="1"/>
-        <TextBlock x:Name="Karosserie2_Daten_Textbox" HorizontalAlignment="Left" Margin="20,200,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="56" Width="375" Grid.Row="1"/>
-        <TextBlock x:Name="Karosserie3_Daten_Textbox" HorizontalAlignment="Left" Margin="20,280,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="56" Width="375" Grid.Row="1"/>
-        <TextBlock x:Name="Karosserie4_Daten_Textbox" HorizontalAlignment="Left" Margin="20,360,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="56" Width="375" Grid.Row="1"/>
-
-        <Button
-            x:Name="Karosserie1_Button"
-            Content="Hinzufügen"
-            HorizontalAlignment="Left"
-            Height="16" Margin="400,121,0,0"
-            VerticalAlignment="Top"
-            Width="80"
-            FontSize="8"
-            FontWeight="Bold"
-            Grid.Row="1"
-            Click="Karosserie1_Button_Click"/>
-        <Button Content="Hinzufügen" HorizontalAlignment="Left" Height="16" Margin="400,201,0,0" VerticalAlignment="Top" Width="80"  FontSize="8" FontWeight="Bold" Grid.Row="1" Click="Karosserie2_Button_Click"/>
-        <Button Content="Hinzufügen" HorizontalAlignment="Left" Height="16" Margin="400,281,0,0" VerticalAlignment="Top" Width="80"  FontSize="8" FontWeight="Bold" Grid.Row="1" Click="Karosserie3_Button_Click"/>
-        <Button Content="Hinzufügen" HorizontalAlignment="Left" Height="16" Margin="400,366,0,0" VerticalAlignment="Top" Width="80"  FontSize="8" FontWeight="Bold" Grid.Row="1" Click="Karosserie4_Button_Click"/>
-
+        <DataGrid Name="dataGrid" CanUserAddRows="false" RenderTransformOrigin="0.522,0.641" Margin="10,110,288,49"  AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Bezeichnung" Width="370" Binding="{Binding Bezeichnung}"/>
+                <DataGridTemplateColumn Header="Add">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Add"
+                                    Width="100"
+                            Click="button_click" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="Button" Content="Weiter" HorizontalAlignment="Left" Margin="610,374,0,0" VerticalAlignment="Top" Click="Weiter_Button_Click" Height="32" Width="100" />
     </Grid>
 </Page>
+
 

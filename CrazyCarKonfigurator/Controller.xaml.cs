@@ -26,59 +26,48 @@ namespace CrazyCarKonfigurator
 
     public partial class controller : Page
     {
+
+        public string Bezeichnung { get; internal set; }
+        public float Preis { get; internal set; }
+        public int Gewicht { get; internal set; }
+        List<controller> Controller = new List<controller>();
+
         public controller()
         {
             InitializeComponent();
         }
-        string[] A = { "A", "B", "C", "D" };
-
+        static string[] A = { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
         private void Page_Loaded(object sender, RoutedEventArgs e)
+
         {
+
+            MainWindow.myMainWindow.Listauswahl(); //updates side list
             MainWindow.myMainWindow.Aktuelle_Auswahl_Liste.Visibility = Visibility.Visible; // Shows the side list
 
-            //Testname = Controller1_Textbox.Text;
-            for (int i = 0; i < 4; i++)
+
+            for (int i = 0; i < CSV_Input.controllerListe.Count; i++)
             {
-                A[i] = CSV_Input.controllerListe[i].Bezeichnung + "\n" + "Preis: " + CSV_Input.controllerListe[i].Preis.ToString() + " €" + "\t" + "Gewicht: " 
-                + CSV_Input.controllerListe[i].Gewicht.ToString() + " g" + "\t" + "UART:  " + CSV_Input.controllerListe[i].UART + "\t" + "l2c:  " + CSV_Input.controllerListe[i].I2C;
+                A[i] = CSV_Input.controllerListe[i].Bezeichnung + "\n" + "Preis: " + CSV_Input.controllerListe[i].Preis.ToString() + " €" + "\t" + "Gewicht: "
+                 + CSV_Input.controllerListe[i].Gewicht.ToString() + " g" + "\t" + "UART:  " + CSV_Input.controllerListe[i].UART + "\t" + "l2c:  " + CSV_Input.controllerListe[i].I2C;
+                Controller.Add(new controller { Bezeichnung = A[i], Preis = CSV_Input.controllerListe[i].Preis, Gewicht = CSV_Input.controllerListe[i].Gewicht });
             }
-            Controller1_Daten_Textbox.Text = A[0];
-            Controller2_Daten_Textbox.Text = A[1];
-            Controller3_Daten_Textbox.Text = A[2];
-            Controller4_Daten_Textbox.Text = A[3];
+
+            dataGrid.ItemsSource = Controller; // Forwards the summary data to the DataGrid
+
+
 
         }
-
- 
-        private void Controller1_Button_Click(object sender, RoutedEventArgs e)
+        private void button_click(object sender, RoutedEventArgs e)
         {
-            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = A[0], Preis = CSV_Input.controllerListe[0].Preis, Gewicht = CSV_Input.controllerListe[0].Gewicht });
+            int i = dataGrid.Items.IndexOf(dataGrid.CurrentItem);
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = A[i], Preis = CSV_Input.controllerListe[i].Preis, Gewicht = CSV_Input.controllerListe[i].Gewicht });
             MainWindow.myMainWindow.Listauswahl();
         }
-        private void Controller2_Button_Click(object sender, RoutedEventArgs e)
-        {
-            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = A[1], Preis = CSV_Input.controllerListe[1].Preis, Gewicht = CSV_Input.controllerListe[1].Gewicht });
-            MainWindow.myMainWindow.Listauswahl();
 
-        }
-        private void Controller3_Button_Click(object sender, RoutedEventArgs e)
-        {
-            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = A[2], Preis = CSV_Input.controllerListe[2].Preis, Gewicht = CSV_Input.controllerListe[2].Gewicht });
-            MainWindow.myMainWindow.Listauswahl();
-
-        }
-        private void Controller4_Button_Click(object sender, RoutedEventArgs e)
-        {
-            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = A[3], Preis = CSV_Input.controllerListe[3].Preis, Gewicht = CSV_Input.controllerListe[3].Gewicht });
-            MainWindow.myMainWindow.Listauswahl();
-
-        }
-       
         private void Weiter_Button_Click(object sender, RoutedEventArgs e)
         {
             Uri uri = new Uri("sensor.xaml", UriKind.Relative);
             this.NavigationService.Navigate(uri);
         }
-       
     }
 }

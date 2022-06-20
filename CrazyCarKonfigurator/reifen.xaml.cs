@@ -22,61 +22,50 @@ namespace CrazyCarKonfigurator
     /// </summary>
     public partial class reifen : Page
     {
+
+        public string Bezeichnung { get; internal set; }
+        public float Preis { get; internal set; }
+        public int Gewicht { get; internal set; }
+        List<reifen> Reifen = new List<reifen>();
+
         public reifen()
         {
             InitializeComponent();
         }
-        string[] A = { "A", "B", "C", "D" };
-
+        static string[] A = { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
         private void Page_Loaded(object sender, RoutedEventArgs e)
+
         {
+
             MainWindow.myMainWindow.Listauswahl(); //updates side list
             MainWindow.myMainWindow.Aktuelle_Auswahl_Liste.Visibility = Visibility.Visible; // Shows the side list
-            //Testname = Controller1_Textbox.Text;
-            for (int i = 0; i < 4; i++)
+
+
+            for (int i = 0; i < CSV_Input.reifenListe.Count; i++)
             {
                 A[i] = CSV_Input.reifenListe[i].Bezeichnung + "\n" + "Preis:" + CSV_Input.reifenListe[i].Preis.ToString() + " €" + "\t" + "Gewicht: " +
-                CSV_Input.reifenListe[i].Gewicht.ToString() + " g" + "\t" + "Durchmesser: " + CSV_Input.reifenListe[1].Durchmesser + " mm"
-                + "\n" + "Breite: " + CSV_Input.reifenListe[i].Breite + " mm" + "\t" + "Farbe: " + CSV_Input.reifenListe[i].Farbe;
+                 CSV_Input.reifenListe[i].Gewicht.ToString() + " g" + "\t" + "Durchmesser: " + CSV_Input.reifenListe[1].Durchmesser + " mm"
+                 + "\n" + "Breite: " + CSV_Input.reifenListe[i].Breite + " mm" + "\t" + "Farbe: " + CSV_Input.reifenListe[i].Farbe;
+                Reifen.Add(new reifen { Bezeichnung = A[i], Preis = CSV_Input.reifenListe[i].Preis, Gewicht = CSV_Input.reifenListe[i].Gewicht });
             }
-            Reifen1_Daten_Textbox.Text = A[0];
-            Reifen2_Daten_Textbox.Text = A[1];
-            Reifen3_Daten_Textbox.Text = A[2];
-            Reifen4_Daten_Textbox.Text = A[3];
+
+            dataGrid.ItemsSource = Reifen; // Forwards the summary data to the DataGrid
+
+
 
         }
-
-
-        private void Reifen1_Button_Click(object sender, RoutedEventArgs e)
+        private void button_click(object sender, RoutedEventArgs e)
         {
-            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = A[0], Preis = CSV_Input.reifenListe[0].Preis, Gewicht = CSV_Input.reifenListe[0].Gewicht });
+            int i = dataGrid.Items.IndexOf(dataGrid.CurrentItem);
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = A[i], Preis = CSV_Input.reifenListe[i].Preis, Gewicht = CSV_Input.reifenListe[i].Gewicht });
             MainWindow.myMainWindow.Listauswahl();
         }
-        private void Reifen2_Button_Click(object sender, RoutedEventArgs e)
-        {
-            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = A[1], Preis = CSV_Input.reifenListe[1].Preis, Gewicht = CSV_Input.reifenListe[1].Gewicht });
-            MainWindow.myMainWindow.Listauswahl();
 
-        }
-        private void Reifen3_Button_Click(object sender, RoutedEventArgs e)
-        {
-            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = A[2], Preis = CSV_Input.reifenListe[2].Preis, Gewicht = CSV_Input.reifenListe[2].Gewicht });
-            MainWindow.myMainWindow.Listauswahl();
-
-        }
-        private void Reifen4_Button_Click(object sender, RoutedEventArgs e)
-        {
-            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = A[3], Preis = CSV_Input.reifenListe[3].Preis, Gewicht = CSV_Input.reifenListe[3].Gewicht });
-            MainWindow.myMainWindow.Listauswahl();
-
-        }
 
         private void Weiter_Button_Click(object sender, RoutedEventArgs e)
         {
             Uri uri = new Uri("zusammenfassung.xaml", UriKind.Relative);
             this.NavigationService.Navigate(uri);
         }
-
-
     }
 }

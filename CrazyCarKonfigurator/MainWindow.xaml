@@ -26,7 +26,7 @@
             Margin="502,110,0,0" 
             HorizontalAlignment="Left" 
             Width="263" 
-            Height="250" 
+            Height="260" 
             VerticalAlignment="Top"/>
         <Image HorizontalAlignment="Left" Height="60" Margin="22,10,0,0" VerticalAlignment="Top" Width="60" Source="/processor.png"/>
         <Image HorizontalAlignment="Left" Height="60" Margin="112,10,0,0" VerticalAlignment="Top" Width="60" Source="/sensor.png"/>

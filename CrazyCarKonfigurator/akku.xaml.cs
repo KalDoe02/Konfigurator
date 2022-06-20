@@ -57,9 +57,27 @@ namespace CrazyCarKonfigurator
         }
         private void button_click(object sender, RoutedEventArgs e)
         {
-            int i = dataGrid.Items.IndexOf(dataGrid.CurrentItem);
-            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = A[i], Preis = CSV_Input.akkuListe[i].Preis, Gewicht = CSV_Input.akkuListe[i].Gewicht });
-            MainWindow.myMainWindow.Listauswahl();
+            int index0 = dataGrid.Items.IndexOf(dataGrid.CurrentItem); // Index of chosen item from list
+            int index = 0; // will show the index of the item if it's already in the list
+            bool found = false;
+            for (int i = 0; i < CSV_Input.summary.Count; i++)
+            {
+                if (CSV_Input.summary[i].Bezeichnung == A[index0]) // searches for the item and gives the index if it's found
+                {
+                    index = i;
+                    found = true; break;
+                }
+            }
+            if (found)  // increases the quantity if the item is already in the list, otherwise it adds it to the list
+            {
+                CSV_Input.summary[index].Quantity += 1;
+            }
+            else
+            {
+                CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = A[index0], Preis = CSV_Input.akkuListe[index0].Preis, Gewicht = CSV_Input.akkuListe[index0].Gewicht, Quantity = 1 });
+            }
+
+            MainWindow.myMainWindow.Listauswahl(); // updates the side list.
         }
 
 

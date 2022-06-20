@@ -16,6 +16,8 @@
         <DataGrid Name="dataGrid" Grid.Row="1" CanUserAddRows="false" RenderTransformOrigin="0.522,0.641" Margin="10,120,10,100"  AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Bezeichnung" Width="400" Binding="{Binding Bezeichnung}"/>
+                <DataGridTextColumn Header="Quantity" Width="100" Binding="{Binding Quantity}"/>
+
                 <DataGridTemplateColumn Header="Delete">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

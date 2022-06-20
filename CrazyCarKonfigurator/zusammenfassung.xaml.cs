@@ -55,8 +55,8 @@ namespace CrazyCarKonfigurator
             float gewicht = 0;
             for (int i = 0; i < CSV_Input.summary.Count; i++) // Preis & Weight Calculation at Page Loaded
             {
-                preis = CSV_Input.summary[i].Preis + preis;
-                gewicht = CSV_Input.summary[i].Gewicht + gewicht;
+                preis = (CSV_Input.summary[i].Preis + preis)*CSV_Input.summary[i].Quantity;
+                gewicht = (CSV_Input.summary[i].Gewicht + gewicht) * CSV_Input.summary[i].Quantity;
             }
             Label1.Content = preis.ToString("0.00") + " €";
             Label2.Content = gewicht + " g";

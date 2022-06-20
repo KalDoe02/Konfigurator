@@ -8,6 +8,7 @@ namespace Klassenbibliothek
 {
     public class Zusammenfassung : Bauteil
     {
+        public int Quantity { get; set; }
 
 
     }

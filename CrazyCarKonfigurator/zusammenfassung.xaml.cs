@@ -40,6 +40,7 @@ namespace CrazyCarKonfigurator
 
         }
 
+
         private void dataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -47,7 +48,6 @@ namespace CrazyCarKonfigurator
         private void button_click(object sender, RoutedEventArgs e)
         {
             MainWindow.myMainWindow.Listauswahl();
-            berechnen(); //recalculates when delete is pressed
         }
         private void berechnen()
         {
@@ -61,5 +61,10 @@ namespace CrazyCarKonfigurator
             Label1.Content = preis.ToString("0.00") + " €";
             Label2.Content = gewicht + " g";
         }
+        private void button1_click(object sender, RoutedEventArgs e)
+        {
+            berechnen(); //recalculates when delete is pressed
+        }
     }
+
 }

@@ -10,24 +10,32 @@
     <Grid>
         <Frame Name="FrameWithinGrid" NavigationUIVisibility="Hidden" >
         </Frame>
-        <Button Content="Controller" HorizontalAlignment="Left" Height="20" Margin="7,23,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click"/>
-        <Button Content="Sensoren" HorizontalAlignment="Left" Height="20" Margin="97,23,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_1"/>
-        <Button Content="Motor" HorizontalAlignment="Left" Height="20" Margin="187,23,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_2"/>
-        <Button Content="Akku" HorizontalAlignment="Left" Height="20" Margin="277,23,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_3"/>
-        <Button Content="Servo" HorizontalAlignment="Left" Height="20" Margin="367,23,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_4"/>
-        <Button Content="Karosserie" HorizontalAlignment="Left" Height="20" Margin="457,23,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_5"/>
-        <Button Content="Reifen" HorizontalAlignment="Left" Height="20" Margin="547,23,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_6"/>
-        <Button Content="Zusammenfassung" HorizontalAlignment="Left" Height="20" Margin="637,23,0,0" VerticalAlignment="Top" Width="136" Click="Button_Click_7"/>
+        <Button Content="Controller" HorizontalAlignment="Left" Height="20" Margin="7,80,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click"/>
+        <Button Content="Sensoren" HorizontalAlignment="Left" Height="20" Margin="97,80,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_1"/>
+        <Button Content="Motor" HorizontalAlignment="Left" Height="20" Margin="187,80,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_2"/>
+        <Button Content="Akku" HorizontalAlignment="Left" Height="20" Margin="277,80,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_3"/>
+        <Button Content="Servo" HorizontalAlignment="Left" Height="20" Margin="367,80,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_4"/>
+        <Button Content="Karosserie" HorizontalAlignment="Left" Height="20" Margin="457,80,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_5"/>
+        <Button Content="Reifen" HorizontalAlignment="Left" Height="20" Margin="547,80,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click_6"/>
+        <Button Content="Zusammenfassung" HorizontalAlignment="Left" Height="20" Margin="637,80,0,0" VerticalAlignment="Top" Width="136" Click="Button_Click_7"/>
         <ListBox
             x:Name="Aktuelle_Auswahl_Liste"
             x:FieldModifier="public"
             Visibility = "Visible"
             d:ItemsSource="{d:SampleData ItemCount=5}" 
-            Margin="502,62,0,0" 
+            Margin="502,110,0,0" 
             HorizontalAlignment="Left" 
             Width="263" 
             Height="250" 
             VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Height="60" Margin="22,10,0,0" VerticalAlignment="Top" Width="60" Source="/processor.png"/>
+        <Image HorizontalAlignment="Left" Height="60" Margin="112,10,0,0" VerticalAlignment="Top" Width="60" Source="/sensor.png"/>
+        <Image HorizontalAlignment="Left" Height="60" Margin="202,10,0,0" VerticalAlignment="Top" Width="60" Source="/motor.png"/>
+        <Image HorizontalAlignment="Left" Height="60" Margin="292,10,0,0" VerticalAlignment="Top" Width="60" Source="/accumulator.png"/>
+        <Image HorizontalAlignment="Left" Height="60" Margin="382,10,0,0" VerticalAlignment="Top" Width="60" Source="/servo.png"/>
+        <Image HorizontalAlignment="Left" Height="60" Margin="472,10,0,0" VerticalAlignment="Top" Width="60" Source="/chassis.png"/>
+        <Image HorizontalAlignment="Left" Height="60" Margin="562,10,0,0" VerticalAlignment="Top" Width="60" Source="/wheel.png"/>
+        <Image HorizontalAlignment="Left" Height="60" Margin="675,10,0,0" VerticalAlignment="Top" Width="60" Source="/text-file.png"/>
 
     </Grid>
 

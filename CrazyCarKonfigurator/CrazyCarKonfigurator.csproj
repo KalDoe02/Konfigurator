@@ -9,7 +9,29 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="accumulator.png" />
+    <None Remove="chassis.png" />
+    <None Remove="motor.png" />
+    <None Remove="processor.png" />
+    <None Remove="sensor.png" />
+    <None Remove="servo.png" />
+    <None Remove="text-file.png" />
+    <None Remove="wheel.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Klassenbibliothek\Klassenbibliothek.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="accumulator.png" />
+    <Resource Include="chassis.png" />
+    <Resource Include="motor.png" />
+    <Resource Include="processor.png" />
+    <Resource Include="sensor.png" />
+    <Resource Include="servo.png" />
+    <Resource Include="text-file.png" />
+    <Resource Include="wheel.png" />
   </ItemGroup>
 
 </Project>

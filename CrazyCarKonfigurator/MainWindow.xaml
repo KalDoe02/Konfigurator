@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CrazyCarKonfigurator"
         mc:Ignorable="d"
-        Title="CrazyCar Konfigurator" Height="480" Width="800">
+        Title="CrazyCar Konfigurator" Height="480" Width="800" ResizeMode="NoResize">
 
     <Grid>
+         
+        
         <Frame Name="FrameWithinGrid" NavigationUIVisibility="Hidden" >
         </Frame>
         <Button Content="Controller" HorizontalAlignment="Left" Height="20" Margin="7,80,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click"/>
@@ -23,11 +25,9 @@
             x:FieldModifier="public"
             Visibility = "Visible"
             d:ItemsSource="{d:SampleData ItemCount=5}" 
-            Margin="520,110,0,0" 
+            Margin="520,110,0,94" 
             HorizontalAlignment="Left" 
-            Width="263" 
-            Height="260" 
-            VerticalAlignment="Top"/>
+            Width="263"/>
         <Image HorizontalAlignment="Left" Height="60" Margin="22,10,0,0" VerticalAlignment="Top" Width="60" Source="/processor.png"/>
         <Image HorizontalAlignment="Left" Height="60" Margin="112,10,0,0" VerticalAlignment="Top" Width="60" Source="/sensor.png"/>
         <Image HorizontalAlignment="Left" Height="60" Margin="202,10,0,0" VerticalAlignment="Top" Width="60" Source="/motor.png"/>

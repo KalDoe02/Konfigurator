@@ -24,14 +24,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="accumulator.png" />
-    <Resource Include="chassis.png" />
-    <Resource Include="motor.png" />
-    <Resource Include="processor.png" />
-    <Resource Include="sensor.png" />
-    <Resource Include="servo.png" />
-    <Resource Include="text-file.png" />
-    <Resource Include="wheel.png" />
+    <Resource Include="Bildererzeichnis\accumulator.png" />
+    <Resource Include="Bildererzeichnis\chassis.png" />
+    <Resource Include="Bildererzeichnis\motor.png" />
+    <Resource Include="Bildererzeichnis\processor.png" />
+    <Resource Include="Bildererzeichnis\sensor.png" />
+    <Resource Include="Bildererzeichnis\servo.png" />
+    <Resource Include="Bildererzeichnis\text-file.png" />
+    <Resource Include="Bildererzeichnis\wheel.png" />
   </ItemGroup>
 
 </Project>

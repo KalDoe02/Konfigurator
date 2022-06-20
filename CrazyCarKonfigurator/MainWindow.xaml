@@ -28,14 +28,14 @@
             Margin="520,110,0,94" 
             HorizontalAlignment="Left" 
             Width="263"/>
-        <Image HorizontalAlignment="Left" Height="60" Margin="22,10,0,0" VerticalAlignment="Top" Width="60" Source="/processor.png"/>
-        <Image HorizontalAlignment="Left" Height="60" Margin="112,10,0,0" VerticalAlignment="Top" Width="60" Source="/sensor.png"/>
-        <Image HorizontalAlignment="Left" Height="60" Margin="202,10,0,0" VerticalAlignment="Top" Width="60" Source="/motor.png"/>
-        <Image HorizontalAlignment="Left" Height="60" Margin="292,10,0,0" VerticalAlignment="Top" Width="60" Source="/accumulator.png"/>
-        <Image HorizontalAlignment="Left" Height="60" Margin="382,10,0,0" VerticalAlignment="Top" Width="60" Source="/servo.png"/>
-        <Image HorizontalAlignment="Left" Height="60" Margin="472,10,0,0" VerticalAlignment="Top" Width="60" Source="/chassis.png"/>
-        <Image HorizontalAlignment="Left" Height="60" Margin="562,10,0,0" VerticalAlignment="Top" Width="60" Source="/wheel.png"/>
-        <Image HorizontalAlignment="Left" Height="60" Margin="675,10,0,0" VerticalAlignment="Top" Width="60" Source="/text-file.png"/>
+        <Image HorizontalAlignment="Left" Height="60" Margin="22,10,0,0" VerticalAlignment="Top" Width="60" Source="Bildererzeichnis/processor.png"/>
+        <Image HorizontalAlignment="Left" Height="60" Margin="112,10,0,0" VerticalAlignment="Top" Width="60" Source="Bildererzeichnis/sensor.png"/>
+        <Image HorizontalAlignment="Left" Height="60" Margin="202,10,0,0" VerticalAlignment="Top" Width="60" Source="Bildererzeichnis/motor.png"/>
+        <Image HorizontalAlignment="Left" Height="60" Margin="292,10,0,0" VerticalAlignment="Top" Width="60" Source="Bildererzeichnis/accumulator.png"/>
+        <Image HorizontalAlignment="Left" Height="60" Margin="382,10,0,0" VerticalAlignment="Top" Width="60" Source="Bildererzeichnis/servo.png"/>
+        <Image HorizontalAlignment="Left" Height="60" Margin="472,10,0,0" VerticalAlignment="Top" Width="60" Source="Bildererzeichnis/chassis.png"/>
+        <Image HorizontalAlignment="Left" Height="60" Margin="562,10,0,0" VerticalAlignment="Top" Width="60" Source="Bildererzeichnis/wheel.png"/>
+        <Image HorizontalAlignment="Left" Height="60" Margin="675,10,0,0" VerticalAlignment="Top" Width="60" Source="Bildererzeichnis/text-file.png"/>
 
     </Grid>
 

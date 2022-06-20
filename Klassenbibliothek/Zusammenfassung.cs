@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Klassenbibliothek
 {
-    public class Zusammenfassung
+    public class Zusammenfassung : Bauteil
     {
-        public string Bezeichnung { get; set; }
-        public float Preis { get; set; }
-        public int Gewicht { get; set; }
+
 
     }
 }

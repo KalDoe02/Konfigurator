@@ -13,12 +13,12 @@ namespace Klassenbibliothek
     public class CSV_Input
     {
         public static List<Controller> controllerListe { get; set; } = GetControllers();
-        public static List<Sensor> sensorListe { get; set; } = getSensors();
+        public static List<Sensor> sensorListe { get; set; } = GetSensors();
         public static List<Motor> motorListe { get; set; } = GetMotors();
         public static List<Servo> servoListe { get; set; } = GetServos();
         public static List<Akku> akkuListe { get; set; } = GetAkkus();
         public static List<Reifen> reifenListe { get; set; } = GetReifen();
-        public static List<Karosserie> karosserieListe { get; set; } = getKarosserie();
+        public static List<Karosserie> karosserieListe { get; set; } = GetKarosserien();
         public static List<Zusammenfassung> summary { get; set; } = new List<Zusammenfassung>();
 
 
@@ -63,7 +63,7 @@ namespace Klassenbibliothek
             }
             return list;
         }
-        public static List<Sensor> getSensors()
+        public static List<Sensor> GetSensors()
         {
             var list = new List<Sensor>();
 
@@ -190,9 +190,9 @@ namespace Klassenbibliothek
                     Preis = Preis,
                     Gewicht = Gewicht,
                     Spannung = Spannung,
-                    capacity = capacity,
-                    art = art,
-                    anzahlzellen = anzahlzellen,
+                    Kapazitaet = capacity,
+                    Art = art,
+                    AnzahlZellen = anzahlzellen,
 
                 });
             }
@@ -231,7 +231,7 @@ namespace Klassenbibliothek
             }
             return list;
         }
-        public static List<Karosserie> getKarosserie()
+        public static List<Karosserie> GetKarosserien()
         {
             var list = new List<Karosserie>();
 

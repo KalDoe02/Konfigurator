@@ -9,8 +9,8 @@ namespace Klassenbibliothek
     public class Akku : Bauteil
     {
         public float Spannung { get; set; }
-        public int capacity { get; set; }
-        public string art { get; set; }
-        public int anzahlzellen { get; set; }
+        public int Kapazitaet { get; set; }
+        public string Art { get; set; }
+        public int AnzahlZellen { get; set; }
     }
 }

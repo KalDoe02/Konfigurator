@@ -38,8 +38,8 @@ namespace CrazyCarKonfigurator
             {
                 A[i] = CSV_Input.akkuListe[i].Bezeichnung + "\n" + "Preis: " + CSV_Input.akkuListe[i].Preis.ToString() + " €" + "\t" + "Gewicht: " +
                 CSV_Input.akkuListe[i].Gewicht.ToString() + " g" + "\t" + "Spannung: " + CSV_Input.akkuListe[i].Spannung + " V" + "\n"
-                + "Kapazität: " + CSV_Input.akkuListe[i].capacity + " mAh" + "\t" + "Anzahl der Zellen: " + CSV_Input.akkuListe[i].anzahlzellen + "\t" +
-                "Art: " + CSV_Input.akkuListe[i].art + "\t";
+                + "Kapazität: " + CSV_Input.akkuListe[i].Kapazitaet + " mAh" + "\t" + "Anzahl der Zellen: " + CSV_Input.akkuListe[i].AnzahlZellen + "\t" +
+                "Art: " + CSV_Input.akkuListe[i].Art + "\t";
             }
             Akku1_Daten_Textbox.Text = A[0];
             Akku2_Daten_Textbox.Text = A[1];

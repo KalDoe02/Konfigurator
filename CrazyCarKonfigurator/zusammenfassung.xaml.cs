@@ -35,7 +35,6 @@ namespace CrazyCarKonfigurator
 
         {
             dataGrid.ItemsSource = CSV_Input.summary; // Forwards the summary data to the DataGrid
-            berechnen(); //calculates price and weight when page is loaded
             MainWindow.myMainWindow.Aktuelle_Auswahl_Liste.Visibility = Visibility.Collapsed;
 
 

@@ -29,10 +29,10 @@
             Width="80"  
             FontSize="8" 
             FontWeight="Bold" 
-            Grid.Row="1"/>
-        <Button Content="Hinzufügen" HorizontalAlignment="Left" Height="16" Margin="400,201,0,0" VerticalAlignment="Top" Width="80"  FontSize="8" FontWeight="Bold" Grid.Row="1" />
-        <Button Content="Hinzufügen" HorizontalAlignment="Left" Height="16" Margin="400,281,0,0" VerticalAlignment="Top" Width="80"  FontSize="8" FontWeight="Bold" Grid.Row="1" />
-        <Button Content="Hinzufügen" HorizontalAlignment="Left" Height="16" Margin="400,366,0,0" VerticalAlignment="Top" Width="80"  FontSize="8" FontWeight="Bold" Grid.Row="1" />
+            Grid.Row="1" Click="Controller1_Button_Click"/>
+        <Button Content="Hinzufügen" HorizontalAlignment="Left" Height="16" Margin="400,201,0,0" VerticalAlignment="Top" Width="80"  FontSize="8" FontWeight="Bold" Grid.Row="1" Click="Controller2_Button_Click"/>
+        <Button Content="Hinzufügen" HorizontalAlignment="Left" Height="16" Margin="400,281,0,0" VerticalAlignment="Top" Width="80"  FontSize="8" FontWeight="Bold" Grid.Row="1" Click="Controller3_Button_Click"/>
+        <Button Content="Hinzufügen" HorizontalAlignment="Left" Height="16" Margin="400,366,0,0" VerticalAlignment="Top" Width="80"  FontSize="8" FontWeight="Bold" Grid.Row="1" Click="Controller4_Button_Click"/>
         
     </Grid>
 </Page>

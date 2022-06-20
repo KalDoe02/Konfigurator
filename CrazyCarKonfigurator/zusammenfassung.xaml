@@ -13,12 +13,14 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="449*"/>
         </Grid.RowDefinitions>
-        <DataGrid Name="dataGrid" Grid.Row="1" CanUserAddRows="false" RenderTransformOrigin="0.522,0.641" Margin="10,92,223,0" ColumnWidth="SizeToHeader">
+        <DataGrid Name="dataGrid" Grid.Row="1" CanUserAddRows="false" RenderTransformOrigin="0.522,0.641" Margin="10,50,10,100"  AutoGenerateColumns="False">
             <DataGrid.Columns>
+                <DataGridTextColumn Header="Bezeichnung" Width="400" Binding="{Binding Bezeichnung}"/>
                 <DataGridTemplateColumn Header="Delete">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Content="Delete"
+                                    Width="100"
                             Command="Delete" 
                             Click="button_click" />
                         </DataTemplate>
@@ -26,10 +28,11 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Label x:Name="Label1" Content="Label" HorizontalAlignment="Left" Margin="603,378,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label x:Name="Label2" Content="Label" HorizontalAlignment="Left" Margin="684,378,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.044,0.026"/>
-        <TextBlock HorizontalAlignment="Left" Margin="609,357,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Preis" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="684,357,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Gewicht" VerticalAlignment="Top"/>
+        <Label x:Name="Label1" Content="Label" HorizontalAlignment="Left" Margin="303,378,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label x:Name="Label2" Content="Label" HorizontalAlignment="Left" Margin="384,378,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-0.044,0.026"/>
+        <TextBlock HorizontalAlignment="Left" Margin="309,357,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Preis" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="384,357,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Gewicht" VerticalAlignment="Top"/>
+        <Button x:Name="button" Content="Berechnen" HorizontalAlignment="Left" Margin="442,357,0,0" Grid.Row="1" VerticalAlignment="Top" Height="47" Width="83" Click="button_click"/>
     </Grid>
 </Page>
 

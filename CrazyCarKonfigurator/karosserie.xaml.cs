@@ -26,13 +26,14 @@ namespace CrazyCarKonfigurator
         {
             InitializeComponent();
         }
+        string[] A = { "A", "B", "C", "D" };
+
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             MainWindow.myMainWindow.Listauswahl(); //updates side list
             MainWindow.myMainWindow.Aktuelle_Auswahl_Liste.Visibility = Visibility.Visible; // Shows the side list
 
             //Testname = Controller1_Textbox.Text;
-            string[] A = { "A", "B", "C", "D" };
             for (int i = 0; i < 4; i++)
             {
                 A[i] = CSV_Input.karosserieListe[i].Bezeichnung + "\n" + "Preis:" + CSV_Input.karosserieListe[i].Preis.ToString() + " €" + "\t" + "Gewicht: " +
@@ -44,38 +45,37 @@ namespace CrazyCarKonfigurator
             Karosserie3_Daten_Textbox.Text = A[2];
             Karosserie4_Daten_Textbox.Text = A[3];
 
-
-
         }
 
 
         private void Karosserie1_Button_Click(object sender, RoutedEventArgs e)
         {
-            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.karosserieListe[0].Bezeichnung, Preis = CSV_Input.karosserieListe[0].Preis, Gewicht = CSV_Input.karosserieListe[0].Gewicht });
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = A[0], Preis = CSV_Input.karosserieListe[0].Preis, Gewicht = CSV_Input.karosserieListe[0].Gewicht });
             MainWindow.myMainWindow.Listauswahl();
         }
         private void Karosserie2_Button_Click(object sender, RoutedEventArgs e)
         {
-            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.karosserieListe[1].Bezeichnung, Preis = CSV_Input.karosserieListe[1].Preis, Gewicht = CSV_Input.karosserieListe[1].Gewicht });
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = A[1], Preis = CSV_Input.karosserieListe[1].Preis, Gewicht = CSV_Input.karosserieListe[1].Gewicht });
             MainWindow.myMainWindow.Listauswahl();
 
         }
         private void Karosserie3_Button_Click(object sender, RoutedEventArgs e)
         {
-            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.karosserieListe[2].Bezeichnung, Preis = CSV_Input.karosserieListe[2].Preis, Gewicht = CSV_Input.karosserieListe[2].Gewicht });
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = A[2], Preis = CSV_Input.karosserieListe[2].Preis, Gewicht = CSV_Input.karosserieListe[2].Gewicht });
             MainWindow.myMainWindow.Listauswahl();
 
         }
         private void Karosserie4_Button_Click(object sender, RoutedEventArgs e)
         {
-            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.karosserieListe[3].Bezeichnung, Preis = CSV_Input.karosserieListe[3].Preis, Gewicht = CSV_Input.karosserieListe[3].Gewicht });
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = A[3], Preis = CSV_Input.karosserieListe[3].Preis, Gewicht = CSV_Input.karosserieListe[3].Gewicht });
             MainWindow.myMainWindow.Listauswahl();
 
         }
 
         private void Weiter_Button_Click(object sender, RoutedEventArgs e)
         {
-            // FrameWithinGrid.Navigate(new System.Uri("sensor.xaml", UriKind.RelativeOrAbsolute));
+            Uri uri = new Uri("reifen.xaml", UriKind.Relative);
+            this.NavigationService.Navigate(uri);
         }
 
 

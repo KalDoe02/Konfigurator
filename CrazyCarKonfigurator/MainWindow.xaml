@@ -21,15 +21,14 @@
         <ListBox
             x:Name="Aktuelle_Auswahl_Liste"
             x:FieldModifier="public"
-            Grid.Row="1"
             Visibility = "Visible"
             d:ItemsSource="{d:SampleData ItemCount=5}" 
-            Margin="565,62,0,0" 
+            Margin="502,62,0,0" 
             HorizontalAlignment="Left" 
-            Width="200" 
+            Width="263" 
             Height="250" 
             VerticalAlignment="Top"/>
-        
+
     </Grid>
 
 </Window>

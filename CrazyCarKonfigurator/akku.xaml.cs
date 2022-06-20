@@ -25,13 +25,15 @@ namespace CrazyCarKonfigurator
         public akku()
         {
             InitializeComponent();
+            
         }
-        private void Page_Loaded(object sender, RoutedEventArgs e)
+
+        string[] A = { "A", "B", "C", "D" };
+
+        public void Page_Loaded(object sender, RoutedEventArgs e)
         {
             MainWindow.myMainWindow.Listauswahl(); //updates side list
             MainWindow.myMainWindow.Aktuelle_Auswahl_Liste.Visibility = Visibility.Visible; // Shows the side list
-
-            string[] A = { "A", "B", "C", "D" };
             for (int i = 0; i < 4; i++)
             {
                 A[i] = CSV_Input.akkuListe[i].Bezeichnung + "\n" + "Preis: " + CSV_Input.akkuListe[i].Preis.ToString() + " €" + "\t" + "Gewicht: " +
@@ -46,31 +48,32 @@ namespace CrazyCarKonfigurator
         }
         private void Akku1_Button_Click(object sender, RoutedEventArgs e)
         {
-            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.akkuListe[0].Bezeichnung, Preis = CSV_Input.akkuListe[0].Preis, Gewicht = CSV_Input.akkuListe[0].Gewicht });
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = A[0], Preis = CSV_Input.akkuListe[0].Preis, Gewicht = CSV_Input.akkuListe[0].Gewicht });
             MainWindow.myMainWindow.Listauswahl();
         }
         private void Akku2_Button_Click(object sender, RoutedEventArgs e)
         {
-            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.akkuListe[1].Bezeichnung, Preis = CSV_Input.akkuListe[1].Preis, Gewicht = CSV_Input.akkuListe[1].Gewicht });
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = A[1], Preis = CSV_Input.akkuListe[1].Preis, Gewicht = CSV_Input.akkuListe[1].Gewicht });
             MainWindow.myMainWindow.Listauswahl();
 
         }
         private void Akku3_Button_Click(object sender, RoutedEventArgs e)
         {
-            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.akkuListe[2].Bezeichnung, Preis = CSV_Input.akkuListe[2].Preis, Gewicht = CSV_Input.akkuListe[2].Gewicht });
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = A[2], Preis = CSV_Input.akkuListe[2].Preis, Gewicht = CSV_Input.akkuListe[2].Gewicht });
             MainWindow.myMainWindow.Listauswahl();
 
         }
         private void Akku4_Button_Click(object sender, RoutedEventArgs e)
         {
-            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = CSV_Input.akkuListe[3].Bezeichnung, Preis = CSV_Input.akkuListe[3].Preis, Gewicht = CSV_Input.akkuListe[3].Gewicht });
+            CSV_Input.summary.Add(new Zusammenfassung { Bezeichnung = A[3], Preis = CSV_Input.akkuListe[3].Preis, Gewicht = CSV_Input.akkuListe[3].Gewicht });
             MainWindow.myMainWindow.Listauswahl();
 
         }
 
         private void Weiter_Button_Click(object sender, RoutedEventArgs e)
         {
-            // FrameWithinGrid.Navigate(new System.Uri("sensor.xaml", UriKind.RelativeOrAbsolute));
+            Uri uri = new Uri("servo.xaml", UriKind.Relative);
+            this.NavigationService.Navigate(uri);
         }
 
 

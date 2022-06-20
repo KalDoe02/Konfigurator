@@ -16,8 +16,8 @@ namespace CrazyCarKonfigurator
         {
             InitializeComponent();
             myMainWindow = this;
-            //  AddtoAuswahl();
-            MainWindow.myMainWindow.Aktuelle_Auswahl_Liste.Visibility = Visibility.Visible;
+            MainWindow.myMainWindow.Aktuelle_Auswahl_Liste.Visibility = Visibility.Collapsed; //Side list stays collapsed until a tab is opened (controller, servo, etc..)
+
 
 
         }
@@ -61,7 +61,6 @@ namespace CrazyCarKonfigurator
         {
             FrameWithinGrid.Navigate(new System.Uri("zusammenfassung.xaml", UriKind.RelativeOrAbsolute));
         }
-
 
 
         public void Listauswahl()

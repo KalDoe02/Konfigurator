@@ -47,7 +47,7 @@ namespace CrazyCarKonfigurator
         }
         private void button_click(object sender, RoutedEventArgs e)
         {
-            MainWindow.myMainWindow.Listauswahl();
+            MainWindow.myMainWindow.Listupdate();
         }
         private void berechnen()
         {
@@ -72,5 +72,4 @@ namespace CrazyCarKonfigurator
             berechnen();
         }
     }
-
 }

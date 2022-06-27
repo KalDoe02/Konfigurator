@@ -33,7 +33,7 @@ namespace Klassenbibliothek
             //string[] csvLines = File.ReadAllLines(@"\Database\Database Controller.csv");
             string[] csvLines = File.ReadAllLines(@"..\..\..\..\Klassenbibliothek\Database\Database Controller.csv");
 
-            string[] A = new string[100];
+            string A;
             // Teile jede Reihe in Spalten
             for (int i = 1; i < csvLines.Length; i++)       // i mit 1 initialisieren, damit erste Zeile übersprungen wird Headerzeile
             {
@@ -51,12 +51,12 @@ namespace Klassenbibliothek
                 string UART = lineData[5];
                 string I2C = lineData[6];
 
-                A[i] = Bezeichnung + "\n" + "Preis: " + Preis.ToString() + " €" + "\t" + "Gewicht: "
+                A = Bezeichnung + "\n" + "Preis: " + Preis.ToString() + " €" + "\t" + "Gewicht: "
                 + Gewicht.ToString() + " g" + "\t" + "UART:  " + UART + "\t" + "l2c:  " + I2C;
 
                 list.Add(new Bauteil
                 {
-                    Bezeichnung = A[i],
+                    Bezeichnung = A,
                     Preis = Preis,
                     Gewicht = Gewicht,
                     
@@ -71,7 +71,7 @@ namespace Klassenbibliothek
             // CSV Daten ín einzelne Zeilen einlesen
             //string[] csvLines = File.ReadAllLines(@"\Database\Database Controller.csv");
             string[] csvLines = File.ReadAllLines(@"..\..\..\..\Klassenbibliothek\Database\Database Sensoren.csv");
-            string[] A = new string[100];
+            string A;
 
             // Teile jede Reihe in Spalten
             for (int i = 1; i < csvLines.Length; i++)       // i mit 1 initialisieren, damit erste Zeile übersprungen wird Headerzeile
@@ -87,12 +87,12 @@ namespace Klassenbibliothek
                 int Reichweite = int.Parse(lineData[3]);
                 string Sensorart = lineData[4];
                 string Schnittstelle = lineData[5];
-                A[i] = Bezeichnung + "\n" + "Preis: " + Preis.ToString() + " €" + "\t" + "\t" + "Gewicht: " +
+                A = Bezeichnung + "\n" + "Preis: " + Preis.ToString() + " €" + "\t" + "\t" + "Gewicht: " +
                 Gewicht.ToString() + " g" + "\t" + "Reichweite: " + Reichweite +
                 "\n" + "Sensorart: " + Sensorart;
                 list.Add(new Bauteil
                 {
-                    Bezeichnung = A[i],
+                    Bezeichnung = A,
                     Preis = Preis,
                     Gewicht = Gewicht,
                 });
@@ -106,7 +106,7 @@ namespace Klassenbibliothek
             // CSV Daten ín einzelne Zeilen einlesen
 
             string[] csvLines = File.ReadAllLines(@"..\..\..\..\Klassenbibliothek\Database\Database Motor.csv");
-            string[] A = new string[100];
+            string A;
 
             // Teile jede Reihe in Spalten
             for (int i = 1; i < csvLines.Length; i++)       // i mit 1 initialisieren, damit erste Zeile übersprungen wird Headerzeile
@@ -121,12 +121,12 @@ namespace Klassenbibliothek
                 int Gewicht = int.Parse(lineData[2]);
                 double Nenndrehzahl = double.Parse(lineData[3]);
                 float Stromaufnahme = float.Parse(lineData[4]);
-                A[i] = Bezeichnung + "\n" + "Preis:" + Preis.ToString() + " €" + "\t" + "Gewicht: " +
+                A = Bezeichnung + "\n" + "Preis:" + Preis.ToString() + " €" + "\t" + "Gewicht: " +
                 Gewicht.ToString() + " g" + "\t" + "Nenndrehzahl: " + Nenndrehzahl + " U/Min"
                 + "\n" + "Stromaufnahme: " + Stromaufnahme + " A";
                 list.Add(new Bauteil
                 {
-                    Bezeichnung = A[i],
+                    Bezeichnung = A,
                     Preis = Preis,
                     Gewicht = Gewicht,
                 });
@@ -138,7 +138,7 @@ namespace Klassenbibliothek
             var list = new List<Bauteil>();
 
             string[] csvLines = File.ReadAllLines(@"..\..\..\..\Klassenbibliothek\Database\Database Servo.csv");
-            string[] A = new string[100];
+            string A;
 
             // Teile jede Reihe in Spalten
             for (int i = 1; i < csvLines.Length; i++)       // i mit 1 initialisieren, damit erste Zeile übersprungen wird Headerzeile
@@ -151,13 +151,13 @@ namespace Klassenbibliothek
                 int Gewicht = int.Parse(lineData[2]);
                 float Stellzeit = float.Parse(lineData[3]);
                 float Drehmoment = float.Parse(lineData[4]);
-                A[i] = Bezeichnung + "\n" + "Preis: " + Preis.ToString() + " €" + "\t" + "Gewicht: " +
+                A = Bezeichnung + "\n" + "Preis: " + Preis.ToString() + " €" + "\t" + "Gewicht: " +
                 Gewicht.ToString() + " g" + "\t" + "Stellzeit: " + Stellzeit + " s" +
                 "\n" + "Drehmoment: " + Drehmoment + " kg/cm";
 
                 list.Add(new Bauteil
                 {
-                    Bezeichnung = A[i],
+                    Bezeichnung = A,
                     Preis = Preis,
                     Gewicht = Gewicht,
 
@@ -171,7 +171,7 @@ namespace Klassenbibliothek
 
             // CSV Daten ín einzelne Zeilen einlesen
             string[] csvLines = File.ReadAllLines(@"..\..\..\..\Klassenbibliothek\Database\Database Akku.csv");
-            string[] A = new string[100];
+            string A;
 
 
             // Teile jede Reihe in Spalten
@@ -189,13 +189,13 @@ namespace Klassenbibliothek
                 int Kapazitaet = int.Parse(lineData[4]);
                 string Art = lineData[5];
                 int AnzahlZellen = int.Parse(lineData[6]);
-                A[i] = Bezeichnung + "\n" + "Preis: " + Preis.ToString() + " €" + "\t" + "Gewicht: " +
+                A = Bezeichnung + "\n" + "Preis: " + Preis.ToString() + " €" + "\t" + "Gewicht: " +
                 Gewicht.ToString() + " g" + "\t" + "Spannung: " + Spannung + " V" + "\n"
                 + "Kapazität: " + Kapazitaet + " mAh" + "\t" + "Anzahl der Zellen: " + AnzahlZellen + "\t" +
                 "Art: " + Art + "\t";
                 list.Add(new Bauteil
                 {
-                    Bezeichnung = A[i],
+                    Bezeichnung = A,
                     Preis = Preis,
                     Gewicht = Gewicht,
 
@@ -210,7 +210,7 @@ namespace Klassenbibliothek
 
             // CSV Daten ín einzelne Zeilen einlesen
             string[] csvLines = File.ReadAllLines(@"..\..\..\..\Klassenbibliothek\Database\Database Reifen.csv");
-            string[] A = new string[100];
+            string A;
 
             // Teile jede Reihe in Spalten
             for (int i = 1; i < csvLines.Length; i++)  // i mit 1 initialisieren, damit erste Zeile übersprungen wird Headerzeile
@@ -225,12 +225,12 @@ namespace Klassenbibliothek
                 int Durchmesser = int.Parse(lineData[3]);
                 int Breite = int.Parse(lineData[4]);
                 string Farbe = lineData[5];
-                A[i] = Bezeichnung + "\n" + "Preis:" + Preis.ToString() + " €" + "\t" + "Gewicht: " +
+                A = Bezeichnung + "\n" + "Preis:" + Preis.ToString() + " €" + "\t" + "Gewicht: " +
                  Gewicht.ToString() + " g" + "\t" + "Durchmesser: " + Durchmesser + " mm"
                  + "\n" + "Breite: " + Breite + " mm" + "\t" + "Farbe: " + Farbe;
                 list.Add(new Bauteil
                 {
-                    Bezeichnung = A[i],
+                    Bezeichnung = A,
                     Preis = Preis,
                     Gewicht = Gewicht,
 
@@ -244,7 +244,7 @@ namespace Klassenbibliothek
 
             // CSV Daten ín einzelne Zeilen einlesen
             string[] csvLines = File.ReadAllLines(@"..\..\..\..\Klassenbibliothek\Database\Database Karosserie.csv");
-            string[] A = new string[100];
+            string A;
 
             // Teile jede Reihe in Spalten
             for (int i = 1; i < csvLines.Length; i++)  // i mit 1 initialisieren, damit erste Zeile übersprungen wird Headerzeile
@@ -259,12 +259,12 @@ namespace Klassenbibliothek
                 int Laenge = int.Parse(lineData[3]);
                 int Breite = int.Parse(lineData[4]);
                 int Radstand = int.Parse(lineData[5]);
-                A[i] = Bezeichnung + "\n" + "Preis:" + Preis.ToString() + " €" + "\t" + "Gewicht: " +
+                A = Bezeichnung + "\n" + "Preis:" + Preis.ToString() + " €" + "\t" + "Gewicht: " +
                  Gewicht.ToString() + " g" + "\t" + "Laenge: " + Laenge + " mm"
                  + "\n" + "Breite: " + Breite + " mm" + "\t" + "Radstand: " + Radstand + " mm";
                 list.Add(new Bauteil
                 {
-                    Bezeichnung = A[i],
+                    Bezeichnung = A,
                     Preis = Preis,
                     Gewicht = Gewicht,
 
